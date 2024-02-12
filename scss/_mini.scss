@@ -1,0 +1,61 @@
+@use './color' as col;
+@use './mixin' as *;
+@use './animation' as *;
+@use './font' as *;
+
+@media (max-width: 300px) {
+	.nav {
+		&_logo {
+			position: relative;
+			left: 50%;
+			transform: translate(-50%);
+		}
+		&_list {
+			width: 100%;
+			top: 180px;
+			right: 50%;
+			transform: translate(50%);
+		}
+		.facebook-btn {
+			right: -10px;
+			bottom: -45px;
+		}
+	}
+    .home{
+        // min-height: 1100px;
+        &_box{
+            padding-top: 370px;
+        }
+    }
+	.offer{
+		
+		.offer_text-top {
+			
+			// padding:0 5px;
+			h1 {
+				font-family: $H1;
+				font-size: 1.6rem;
+				font-weight: 600;
+				display: inline-block;
+				// margin-left: 30px;
+			}
+			p{
+				font-size: 1.4rem;
+				margin-top: 15px;
+				text-indent: 20px
+	
+			}
+		}
+	}
+}
+@media (min-width: 301px) and (max-width: 388px) {
+	.nav {
+		&_logo {
+			scale: 1.2;
+		}
+		.facebook-btn {
+			right: -70px;
+			bottom: -45px;
+		}
+	}
+}

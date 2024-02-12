@@ -1,0 +1,102 @@
+@use './color' as col;
+@use './mixin' as *;
+@media (min-width: 998px) {
+	.home {
+		&_box {
+			&-list {
+				ol {
+					scale: 1.1;
+				}
+			}
+		}
+	}
+	.offer {
+		&_map {
+			margin-top: 60px;
+		}
+		.offer_text-top {
+			padding: 0 20vw;
+			h1 {
+				font-size: 2.4rem;
+			}
+			h2 {
+				font-size: 2.2rem;
+			}
+			p {
+				font-size: 2rem;
+				text-indent: 40px;
+			}
+		}
+		.offer_icon {
+			&-box {
+				gap: 90px;
+			}
+			&-card {
+				width: 20%;
+				p:nth-child(2) {
+					font-size: 2rem;
+				}
+				p:nth-child(3) {
+					font-size: 1.8rem;
+				}
+			}
+		}
+		&_btns {
+			padding: 0 20vw;
+			.check-offer,
+			.develop {
+				font-size: 2rem;
+			}
+			.approved-img {
+				bottom: 20px;
+				right: 80px;
+				width: 20vw;
+			}
+		}
+	}
+	.examples {
+		.examples_h2 {
+			width: 60%;
+			padding-left: 30px;
+			font-size: 2.4rem;
+			text-align: end;
+		}
+		&_content {
+			padding-top: 50px;
+			padding-bottom: 50px;
+		}
+		&_box {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-top: 10px;
+		}
+		&_text {
+			width: 100%;
+			margin-top: 0px;
+			padding-right: 40px;
+			font-size: 2rem;
+			border: 2px solid col.$mojaPasja;
+			border-radius: 20px;
+		}
+		&_img {
+			width: 70%;
+			height: 50VW;
+			transform: translate(-20px);
+			border-radius: 20px;
+		}
+		.examples_btns {
+			gap: 30px;
+			.check-offer {
+				font-size: 2rem;
+			}
+			.develop {
+				font-size: 2rem;
+			}
+		}
+	}
+	.disable{
+		display: none;
+		
+	}
+}

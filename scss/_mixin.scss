@@ -1,0 +1,41 @@
+@use './color' as col;
+@mixin btn-buy-now {
+	position: relative;
+	transform: rotate(-7deg) translate(-20px);
+	border: 2px solid col.$buyNowBackground;
+	border-radius: 50px;
+	color: col.$buyNowText;
+	z-index: 0;
+	overflow: hidden;
+	&::before {
+		content: '';
+		position: absolute;
+		top: -1px;
+		right: -1px;
+		left: -1px;
+		bottom: -1px;
+		transform: rotate(8deg);
+		background-color: col.$buyNowBackground;
+		// border-radius: 50px 5px;
+		z-index: -1;
+	}
+	&:hover {
+		scale: 1.2;
+	}
+}
+@mixin checkOfferBtn {
+	padding: 10px 30px;
+	background-color: col.$buyNowBackground;
+	border: transparent;
+	border-radius: 50px;
+	text-decoration: none;
+	color: col.$backgroundColor;
+}
+@mixin developBtn {
+	padding: 10px 30px;
+	background-color: transparent;
+	border:1px solid col.$buyNowBackground;
+	border-radius: 50px;
+	text-decoration: none;
+	color: col.$burgerColor;
+}
