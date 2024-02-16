@@ -31,7 +31,7 @@ const responsive = () => {
 		cartBlogTimeTwo = 9000;
 	}
 };
-responsive();
+// responsive();
 
 const shiftImg = () => {
 	for (let i = 0; i < imgPortfolioAll.length; i++) {
