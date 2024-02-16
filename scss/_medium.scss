@@ -81,7 +81,7 @@
 		}
 		&_img {
 			width: 70%;
-			height: 50VW;
+			height: 50vw;
 			transform: translate(-20px);
 			border-radius: 20px;
 		}
@@ -95,8 +95,49 @@
 			}
 		}
 	}
-	.disable{
+	.education {
+		&_box {
+			&-h2 {
+				font-size: 2.4rem;
+			}
+			p {
+				font-size: 2rem;
+			}
+			&-slider {
+				// width: 80%;
+				// height: 80vw;
+				.blog_cart {
+					width: 45%;
+					h4 {
+						font-size: 2rem;
+					}
+				}
+			}
+			&-map {
+				width: 40%;
+				left: 50%;
+				// transform: translate(0%);
+				h3 {
+					font-size: 2.4rem;
+				}
+				ul {
+					li {
+						font-size: 2rem;
+					}
+				}
+			}
+			&-btn {
+				justify-content: start;
+				margin-top: -50px;
+				a {
+					button {
+						font-size: 2rem;
+					}
+				}
+			}
+		}
+	}
+	.disable {
 		display: none;
-		
 	}
 }
