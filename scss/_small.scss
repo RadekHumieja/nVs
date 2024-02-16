@@ -18,7 +18,7 @@
 					position: absolute;
 					transform: rotate(-13deg) scale(0);
 					animation: springBtnBlog765 1s 1.9s
-					cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
+						cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
 				}
 			}
 			.facebook-btn {
@@ -166,9 +166,71 @@
 			}
 		}
 	}
-	
-	.disable{
+
+	.education {
+		&_box {
+			&-h2 {
+				font-size: 2.2rem;
+			}
+			p {
+				font-size: 1.8rem;
+			}
+			&-slider {
+				width: 100%;
+				height: 40vw;
+				.blog_cart {
+					width: 50%;
+					height: 80%;
+					// top: 50%;
+					&:nth-child(odd) {
+						// left: 10%;
+						animation: cartAnimeL 10s ease-in-out;
+						// animation: cartAnime 10s ease-in-out;
+					}
+					&:nth-child(even) {
+						// left: 65%;
+						animation: cartAnimeR 10s ease-in-out;
+						// animation: cartAnime 10s ease-in-out;
+					}
+					h4 {
+						font-size: 1.8rem;
+					}
+					// &-img {
+					// 	width: 100%;
+					// 	height: 100%;
+					// }
+				}
+			}
+			&-map {
+				width: 50%;
+				padding: 40px 20px;
+				h3 {
+					font-size: 2.2rem;
+					right: -60px;
+					top: -20px;
+				}
+				ul {
+					li {
+						font-size: 1.8rem;
+						// a {
+						// 	&:hover {
+						// 		color: col.$ofertaHover;
+						// 	}
+						// }
+					}
+				}
+			}
+			&-btn {
+				a {
+					button {
+						font-size: 1.8rem;
+					}
+				}
+			}
+		}
+	}
+
+	.disable {
 		display: none;
-		
 	}
 }
