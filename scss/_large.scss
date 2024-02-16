@@ -66,6 +66,68 @@
 			}
 		}
 	}
+	.education {
+		&_box {
+			display: grid;
+			grid-template-columns: repeat(3,1fr);
+			// grid-template-rows: 30px,100px,200px,30px;
+			// grid-template-rows: ;
+			padding: 50px;
+			&-h2 {
+				font-size: 2.6rem;
+				grid-column: 1/4;
+				grid-row: 1;
+			}
+			p {
+				font-size: 2.2rem;
+				grid-column: 1/4;
+				grid-row: 2;
+			}
+			&-slider {
+				grid-column: 1/3;
+				grid-row: 3;
+				left: 20px;
+				width: 100%;
+				max-width: 700px;
+				height: 30vw;
+				max-height: 400px;
+				.blog_cart {
+					width: 50%;
+					h4 {
+						font-size: 2.2rem;
+					}
+				}
+			}
+			&-map {
+				grid-column: 3/4;
+				grid-row: 3/6;
+				width: 70%;
+				
+				left: 50%;
+				// right: 0px;
+				// transform: translate(0%);
+				h3 {
+					font-size: 2.6rem;
+				}
+				ul {
+					li {
+						font-size: 2.2rem;
+					}
+				}
+			}
+			&-btn {
+				grid-column: 2/3;
+				grid-row: 5;
+				justify-content: end;
+				margin-top: 20px;
+				a {
+					button {
+						font-size: 2.2rem;
+					}
+				}
+			}
+		}
+	}
 	.disable{
 		display: none;
 		
