@@ -747,13 +747,13 @@ body {
 				font-size: 1.8rem;
 				font-weight: 400;
 				position: absolute;
-				right: -10px;
-				top: -10px;
-				transform: rotate(5deg) translate(30px) scale(0);
-				padding: 5px 15px;
+				right: -30px;
+				top: -30px;
+				transform: rotate(10deg) translate(30px) scale(0);
+				padding: 8px 25px;
 				border-radius: 10px;
 				background-color: col.$oferta;
-				animation: springBtnOffer 1.5s 0.9s
+				animation: springBtnMap 1.5s 0.9s
 					cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
 			}
 			ul {

@@ -67,6 +67,29 @@
     transform: scale(1) rotate(5deg);
   }
 }
+@keyframes springBtnMap {
+  0% {
+    transform: scale(0) rotate(10deg);
+  }
+  60% {
+    transform: scale(1.3) rotate(10deg);
+  }
+  70% {
+    transform: scale(0.8) rotate(10deg);
+  }
+  80% {
+    transform: scale(1.2) rotate(10deg);
+  }
+  90% {
+    transform: scale(0.9) rotate(10deg);
+  }
+  95% {
+    transform: scale(1.1) rotate(10deg);
+  }
+  100% {
+    transform: scale(1) rotate(10deg);
+  }
+}
 @keyframes springBtnContact {
   0% {
     transform: scale(0) rotate(15deg) translate(60px);
@@ -973,13 +996,13 @@ body {
   font-size: 1.8rem;
   font-weight: 400;
   position: absolute;
-  right: -10px;
-  top: -10px;
-  transform: rotate(5deg) translate(30px) scale(0);
-  padding: 5px 15px;
+  right: -30px;
+  top: -30px;
+  transform: rotate(10deg) translate(30px) scale(0);
+  padding: 8px 25px;
   border-radius: 10px;
   background-color: rgba(27, 66, 208, 0.5843137255);
-  animation: springBtnOffer 1.5s 0.9s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
+  animation: springBtnMap 1.5s 0.9s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
 }
 .education_box-map ul {
   text-align: center;
@@ -1094,6 +1117,29 @@ body {
   }
   100% {
     transform: scale(1) rotate(5deg);
+  }
+}
+@keyframes springBtnMap {
+  0% {
+    transform: scale(0) rotate(10deg);
+  }
+  60% {
+    transform: scale(1.3) rotate(10deg);
+  }
+  70% {
+    transform: scale(0.8) rotate(10deg);
+  }
+  80% {
+    transform: scale(1.2) rotate(10deg);
+  }
+  90% {
+    transform: scale(0.9) rotate(10deg);
+  }
+  95% {
+    transform: scale(1.1) rotate(10deg);
+  }
+  100% {
+    transform: scale(1) rotate(10deg);
   }
 }
 @keyframes springBtnContact {
@@ -1362,6 +1408,29 @@ body {
   }
   100% {
     transform: scale(1) rotate(5deg);
+  }
+}
+@keyframes springBtnMap {
+  0% {
+    transform: scale(0) rotate(10deg);
+  }
+  60% {
+    transform: scale(1.3) rotate(10deg);
+  }
+  70% {
+    transform: scale(0.8) rotate(10deg);
+  }
+  80% {
+    transform: scale(1.2) rotate(10deg);
+  }
+  90% {
+    transform: scale(0.9) rotate(10deg);
+  }
+  95% {
+    transform: scale(1.1) rotate(10deg);
+  }
+  100% {
+    transform: scale(1) rotate(10deg);
   }
 }
 @keyframes springBtnContact {
@@ -1698,8 +1767,8 @@ body {
   }
   .education_box-map h3 {
     font-size: 2.2rem;
-    right: -60px;
-    top: -20px;
+    right: -40px;
+    top: -30px;
   }
   .education_box-map ul li {
     font-size: 1.8rem;
@@ -1892,12 +1961,12 @@ body {
   }
   .education_box-h2 {
     font-size: 2.6rem;
-    grid-column: 1/4;
+    grid-column: 1/3;
     grid-row: 1;
   }
   .education_box p {
     font-size: 2.2rem;
-    grid-column: 1/4;
+    grid-column: 1/3;
     grid-row: 2;
   }
   .education_box-slider {
@@ -1917,9 +1986,13 @@ body {
   }
   .education_box-map {
     grid-column: 3/4;
-    grid-row: 3/6;
-    width: 70%;
-    left: 50%;
+    grid-row: 2/4;
+    width: 80%;
+    left: auto;
+    right: -80px;
+    transform: translate(0);
+    margin: 40px 0;
+    margin-top: 120px;
   }
   .education_box-map h3 {
     font-size: 2.6rem;
@@ -1928,9 +2001,9 @@ body {
     font-size: 2.2rem;
   }
   .education_box-btn {
-    grid-column: 2/3;
-    grid-row: 5;
-    justify-content: end;
+    grid-column: 1/2;
+    grid-row: 4;
+    justify-content: start;
     margin-top: 20px;
   }
   .education_box-btn a button {
