@@ -18,6 +18,8 @@ let activeTimeouts = [];
 let cartBlogTimeOne = 9000;
 let cartBlogTimeTwo = 1000;
 let q;
+let spanItem;
+let numSub;
 
 document.addEventListener('DOMContentLoaded', () => {
 	nav.classList.remove('disable');
@@ -109,20 +111,28 @@ function windowWidth() {
 	const screen = window.innerWidth;
 	if (screen < 765) {
 		q = 1;
+		numSub = q + 2;
 		startCard(q);
 		displayCard(q);
+		subpages(numSub);
 	} else if (screen >= 765 && screen < 998) {
 		q = 2;
+		numSub = q + 3;
 		startCard(q);
 		displayCard(q);
+		subpages(numSub);
 	} else if (screen >= 998 && screen < 1280) {
 		q = 3;
+		numSub = q + 6;
 		startCard(q);
 		displayCard(q);
+		subpages(numSub);
 	} else if (screen >= 1280) {
 		q = 4;
+		numSub = q + 9;
 		startCard(q);
 		displayCard(q);
+		subpages(numSub);
 	}
 }
 function startCard(q) {
@@ -141,7 +151,7 @@ function displayCard(q) {
 		siteNum.appendChild(newEl);
 		start += q;
 	}
-	const spanItem = document.querySelectorAll('.opinions_site-num span');
+	spanItem = document.querySelectorAll('.opinions_site-num span');
 	spanItem[0].classList.add('active');
 	spanItem.forEach((el) =>
 		el.addEventListener('click', (e) => {
@@ -154,9 +164,33 @@ function displayCard(q) {
 			showCard(clickF1);
 		})
 	);
-	if (window.innerWidth < 390) {
-		spanItem.forEach(span=>span.classList.add('disable'))
+}
+function subpages() {
+	let spanActiveTab;
+	spanItem.forEach((span) => {
+		span.classList.add('disable');
+		const spanActive = span.classList.contains('active');
+		if (spanActive) {
+			const spanActive = Array.from(spanItem).indexOf(span);
+			spanActiveTab = spanActive;
+			console.log('aktywny span', spanActiveTab);
+			// span.classList.remove('disable');
+		}
+	});
+	const displayRangeLeft = ((numSub - 1) / 2) * -1;
+	const displayRangeRight = (numSub - 1) / 2;
+	const displayRange = spanActiveTab + displayRangeLeft;
+	for (let i = displayRange; i < displayRange + numSub; i++) {
+		if (i >= 0 && i < spanItem.length) {
+			const element = spanItem[i];
+			console.log(element);
+			element.classList.remove('disable');
+		}
 	}
+	// console.log(spanActiveTab);
+	// console.log(numSub);
+	// console.log('ilość wyswietlanych span z prawej', displayRangeRight);
+	// console.log('ilość wyswietlanych span z lewwej', displayRangeLeft);
 }
 function showCard(clickF1) {
 	opinions.forEach((el) => {
@@ -194,6 +228,8 @@ function arrowOpinion(int) {
 	spanItemActive[spanIndex].classList.add('active');
 	arrowHidden(spanItemActive);
 	showCard(spanAtributeValue);
+	subpages();
+	// windowWidth()
 }
 function arrowHidden(spanItem) {
 	const arrowLeft = document.querySelector('.opinions_site-btn--left');
