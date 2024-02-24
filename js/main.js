@@ -7,6 +7,7 @@ const cartBlog = document.querySelectorAll('.blog_cart');
 const blog = document.querySelector('.education_box-slider');
 const opinions = document.querySelectorAll('.opinions_list-card');
 const siteNum = document.querySelector('.opinions_site-num');
+const stars = document.querySelector('.stars');
 
 let indexCart = 0;
 let resetSetTimeout = false;
@@ -20,6 +21,10 @@ let cartBlogTimeTwo = 1000;
 let q;
 let spanItem;
 let numSub;
+let starsWidth = stars.offsetWidth;
+let starsHeight = stars.offsetHeight;
+// console.log(starsWidth, starsHeight);
+// console.log(window.innerWidth,stars.innerWidth);
 
 document.addEventListener('DOMContentLoaded', () => {
 	nav.classList.remove('disable');
@@ -173,7 +178,7 @@ function subpages() {
 		if (spanActive) {
 			const spanActive = Array.from(spanItem).indexOf(span);
 			spanActiveTab = spanActive;
-			console.log('aktywny span', spanActiveTab);
+			// console.log('aktywny span', spanActiveTab);
 			// span.classList.remove('disable');
 		}
 	});
@@ -183,7 +188,7 @@ function subpages() {
 	for (let i = displayRange; i < displayRange + numSub; i++) {
 		if (i >= 0 && i < spanItem.length) {
 			const element = spanItem[i];
-			console.log(element);
+			// console.log(element);
 			element.classList.remove('disable');
 		}
 	}
@@ -245,20 +250,72 @@ function arrowHidden(spanItem) {
 		arrowRight.style.visibility = 'visible';
 	}
 }
+function starPozition() {
+	const starsX = parseInt(Math.random() * starsWidth);
+	const starsY = parseInt(Math.random() * starsHeight);
+	const newStar = document.createElement('div');
+	newStar.classList.add('star');
+	newStar.style.left = starsX + 'px';
+	newStar.style.top = starsY + 'px';
+	stars.appendChild(newStar);
+	setTimeStar(newStar);
+}
+function blinkStar(newStar) {
+	const starOpacity = parseFloat(Math.random().toFixed(2));
+	const starSize = parseFloat(Math.random() * 4);
+	newStar.style.opacity = starOpacity;
+	newStar.style.width = starSize + 'px';
+	newStar.style.height = starSize + 'px';
+}
+function setTimeStar(newStar) {
+	setInterval(() => {
+		blinkStar(newStar);
+		setTimeout(() => {
+			newStar.remove();
+			const sta = document.querySelectorAll('.star');
+			// console.log(sta);
+		}, 10000);
+	}, 800);
+}
+const starsStart = () => {
+	const starInterval = setInterval(() => {
+		// if (starsWidth === 0 && starsHeight === 0) {
+		// 	starsWidth = stars.offsetWidth;
+		// 	starsHeight = stars.offsetHeight;
+		// }
+		starPozition();
+	}, 400);
+};
 windowWidth();
 let observer = new IntersectionObserver((el) => {
 	el.forEach((en) => {
-		if (en.isIntersecting && !isAnimationStarted) {
+		if (
+			en.isIntersecting &&
+			!isAnimationStarted &&
+			en.target.classList.contains('education_box-slider')
+		) {
 			// obser();
 			isAnimationStarted = true;
 			resetSetTimeout = false;
 			animeCart();
-		} else {
+		} else if (en.target.classList.contains('education_box-slider')) {
 			resetBlog();
+		}
+		if (en.isIntersecting && en.target.classList.contains('stars')) {
+			starsWidth = stars.offsetWidth;
+			starsHeight = stars.offsetHeight;
+			starsStart();
+		} else if (en.target.classList.contains('stars')) {
+			const starNum = document.querySelectorAll('.star');
+			
+			// clearInterval(starInterval);
+			console.log(starNum);
+			console.log('wyjście', en.target);
 		}
 	});
 }, observerOptions);
 observer.observe(blog);
+observer.observe(stars);
 cartBlog.forEach((cart) =>
 	cart.addEventListener('animationend', function () {
 		cart.classList.add('disable');
