@@ -23,6 +23,7 @@ let spanItem;
 let numSub;
 let starsWidth = stars.offsetWidth;
 let starsHeight = stars.offsetHeight;
+let starInterval;
 // console.log(starsWidth, starsHeight);
 // console.log(window.innerWidth,stars.innerWidth);
 
@@ -278,11 +279,7 @@ function setTimeStar(newStar) {
 	}, 800);
 }
 const starsStart = () => {
-	const starInterval = setInterval(() => {
-		// if (starsWidth === 0 && starsHeight === 0) {
-		// 	starsWidth = stars.offsetWidth;
-		// 	starsHeight = stars.offsetHeight;
-		// }
+	starInterval = setInterval(() => {
 		starPozition();
 	}, 400);
 };
@@ -307,10 +304,11 @@ let observer = new IntersectionObserver((el) => {
 			starsStart();
 		} else if (en.target.classList.contains('stars')) {
 			const starNum = document.querySelectorAll('.star');
-			
-			// clearInterval(starInterval);
-			console.log(starNum);
-			console.log('wyjście', en.target);
+			starNum.forEach((star) => {
+				clearInterval(starInterval);
+				star.remove();
+				// console.log(starInterval);
+			});
 		}
 	});
 }, observerOptions);
