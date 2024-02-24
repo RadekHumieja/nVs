@@ -299,6 +299,7 @@ body {
   scale: 1;
   transition: scale 0.5s;
   animation: burgerNav 1s;
+  z-index: 4;
 }
 .nav_burger.burger-wrapper {
   right: 50%;
@@ -395,7 +396,7 @@ body {
   align-items: center;
   gap: 5px;
   scale: 0.9;
-  z-index: 0;
+  z-index: 3;
 }
 .nav_list a,
 .nav .nav_aside a {
@@ -1036,6 +1037,7 @@ body {
 .opinions {
   position: relative;
   background-color: rgb(0, 0, 0);
+  z-index: 0;
 }
 .opinions_padding {
   padding: 0 10px;
@@ -1064,7 +1066,6 @@ body {
   gap: 50px;
   width: 100%;
   height: 45vh;
-  z-index: 0;
 }
 .opinions_box .opinions_list-card {
   position: relative;
@@ -1075,7 +1076,6 @@ body {
   text-align: center;
   border: 1px solid rgba(171, 23, 70, 0.6);
   border-radius: 10px;
-  z-index: -1;
   transition: opacity 0.3s;
 }
 .opinions_box .opinions_list-card::before {
@@ -1085,7 +1085,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(55, 17, 17, 0.2);
   z-index: -1;
 }
 .opinions_box .opinions_list-card--img {
@@ -1128,7 +1128,7 @@ body {
   justify-content: center;
   align-items: center;
   font-size: 2.2rem;
-  z-index: 0;
+  z-index: 1;
 }
 .opinions_box .opinions_site-btn {
   margin: 0 30px;
@@ -1138,7 +1138,6 @@ body {
   color: #fff;
   transition: scale 0.3s, color 0.3s;
   cursor: pointer;
-  z-index: 1;
 }
 .opinions_box .opinions_site-btn:hover {
   color: rgb(150, 150, 217);
@@ -1153,7 +1152,6 @@ body {
   display: flex;
   justify-content: space-between;
   gap: 30px;
-  z-index: 1;
 }
 .opinions_box .opinions_site-num span {
   transition: scale 0.3s, color 0.3s;
@@ -1168,6 +1166,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: -10;
 }
 .opinions .stars .star {
   position: absolute;
