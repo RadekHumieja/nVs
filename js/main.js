@@ -8,6 +8,7 @@ const blog = document.querySelector('.education_box-slider');
 const opinions = document.querySelectorAll('.opinions_list-card');
 const siteNum = document.querySelector('.opinions_site-num');
 const stars = document.querySelector('.stars');
+const faQuestion = document.querySelectorAll('.faq_text-question');
 
 let indexCart = 0;
 let resetSetTimeout = false;
@@ -33,6 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	setTimeout(() => {
 		main.classList.remove('disable');
 		shiftImg();
+		faQuestionReset();
 	}, 1000);
 });
 
@@ -193,10 +195,6 @@ function subpages() {
 			element.classList.remove('disable');
 		}
 	}
-	// console.log(spanActiveTab);
-	// console.log(numSub);
-	// console.log('ilość wyswietlanych span z prawej', displayRangeRight);
-	// console.log('ilość wyswietlanych span z lewwej', displayRangeLeft);
 }
 function showCard(clickF1) {
 	opinions.forEach((el) => {
@@ -283,7 +281,31 @@ const starsStart = () => {
 		starPozition();
 	}, 400);
 };
-windowWidth();
+function faQuestionToggle(e) {
+	const heightH3 = this.children[0].offsetHeight;
+	const heightQuestion = this.offsetHeight;
+	const heightAnswer = this.children[2].offsetHeight;
+	const heightSum = heightH3 + heightAnswer + 10;
+	const heightDifference = heightQuestion - heightAnswer + 10;
+	if (heightQuestion === heightSum) {
+		this.style.height = heightDifference + 'px';
+		this.children[1].style.transform = `translate(0, -50%) rotate(90deg)`;
+	} else {
+		faQuestionReset(10);
+		this.style.height = heightSum + 'px';
+		this.children[1].style.transform = `translate(0, -50%) rotate(-90deg)`;
+	}
+}
+function faQuestionReset(adj = 0) {
+	faQuestion.forEach((faq) => {
+		const heightQuestion = faq.offsetHeight;
+		const heightAnswer = faq.children[2].offsetHeight;
+		const heightDifference = heightQuestion - heightAnswer + adj;
+		faq.style.height = heightDifference + 'px';
+		faq.children[1].style.transform = `translate(0, -50%) rotate(90deg)`;
+	});
+}
+
 let observer = new IntersectionObserver((el) => {
 	el.forEach((en) => {
 		if (
@@ -335,4 +357,7 @@ window.addEventListener('resize', () => {
 		el.remove();
 	});
 	windowWidth();
+	faQuestionReset();
 });
+faQuestion.forEach((faq) => faq.addEventListener('click', faQuestionToggle));
+windowWidth();

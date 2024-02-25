@@ -153,7 +153,7 @@ body {
 		align-items: center;
 		gap: 5px;
 		scale: 0.9;
-	z-index: 3;
+		z-index: 3;
 		// transition: transform 1s, opacity 1s;
 		a {
 			font-size: 2rem;
@@ -833,7 +833,7 @@ body {
 				font-size: 1.2rem;
 				text-align: center;
 				border: 1px solid col.$mojaPasja;
-				border-radius: 10px;
+				border-radius: 15px;
 				transition: opacity 0.3s;
 				&::before {
 					content: '';
@@ -843,7 +843,8 @@ body {
 					width: 100%;
 					height: 100%;
 					background-color: rgba(55, 17, 17, 0.2);
-				z-index: -1;
+					backdrop-filter: blur(5px);
+					z-index: -1;
 				}
 				&--img {
 					position: absolute;
@@ -941,6 +942,86 @@ body {
 			transition: opacity 0.4s, width 0.4s, height 0.4s;
 			transform-origin: 50% 50%;
 			// z-index: 2;
+		}
+	}
+}
+.faq {
+	position: relative;
+	// height: 100vw;
+	padding: 60px 10vw;
+	background-color: rgba(0, 0, 0, 1);
+	z-index:0;
+	h2 {
+		font-family: $H1;
+		font-size: 2.2rem;
+		font-weight: 600;
+		text-align: center;
+		margin-bottom: 60px;
+	}
+	&_background {
+		position: relative;
+		// height: 100%;
+		z-index: 1;
+	}
+	&_text {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 10px;
+		&-question {
+			position: relative;
+			width: 100%;
+			padding: 10px 15px;
+			border: 1px solid col.$mojaPasja;
+			border-radius: 5px;
+			background-color: rgba(55, 17, 17, 0.2);
+			backdrop-filter: blur(5px);
+			cursor: pointer;
+			overflow: hidden;
+			transition: height .3s;
+			h3 {
+				font-family: $tenorSans;
+				font-size: 1.6rem;
+				display: inline-block;
+				
+			}
+			.fa-solid {
+				position: absolute;
+				right: 15px;
+				top: 50%;
+				transform: translate(0, -50%) rotate(90deg);
+				font-size: 1.6rem;
+				transition: transform .3s;
+			}
+			&--answer {
+				display: flex;
+				flex-direction: column;
+				gap: 5px;
+				padding: 0px 20px 10px 10px;
+				padding-top: 10px;
+				overflow: hidden;
+				transition: opacity .3s;
+				p{
+					font-size: 1.4rem;
+					text-indent: 15px;
+				}
+			}
+		}
+	}
+	&_img {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translate(-50%);
+		// width: 100%;
+		height: 100%;
+		opacity: 0.2;
+		z-index: -1;
+		img {
+			// width: 100%;
+			height: 100%;
+			object-position: center;
+			object-fit: cover;
 		}
 	}
 }
