@@ -947,10 +947,10 @@ body {
 }
 .faq {
 	position: relative;
-	// height: 100vw;
+	// height: 100%;
 	padding: 60px 10vw;
 	background-color: rgba(0, 0, 0, 1);
-	z-index:0;
+	z-index: 0;
 	h2 {
 		font-family: $H1;
 		font-size: 2.2rem;
@@ -968,6 +968,7 @@ body {
 		flex-direction: column;
 		align-items: center;
 		gap: 10px;
+		width: 100%;
 		&-question {
 			position: relative;
 			width: 100%;
@@ -978,12 +979,11 @@ body {
 			backdrop-filter: blur(5px);
 			cursor: pointer;
 			overflow: hidden;
-			transition: height .3s;
+			transition: height 0.3s;
 			h3 {
 				font-family: $tenorSans;
 				font-size: 1.6rem;
 				display: inline-block;
-				
 			}
 			.fa-solid {
 				position: absolute;
@@ -991,7 +991,7 @@ body {
 				top: 50%;
 				transform: translate(0, -50%) rotate(90deg);
 				font-size: 1.6rem;
-				transition: transform .3s;
+				transition: transform 0.3s;
 			}
 			&--answer {
 				display: flex;
@@ -1000,8 +1000,8 @@ body {
 				padding: 0px 20px 10px 10px;
 				padding-top: 10px;
 				overflow: hidden;
-				transition: opacity .3s;
-				p{
+				transition: opacity 0.3s;
+				p {
 					font-size: 1.4rem;
 					text-indent: 15px;
 				}
@@ -1022,6 +1022,40 @@ body {
 			height: 100%;
 			object-position: center;
 			object-fit: cover;
+		}
+	}
+}
+.footer {
+	position: relative;
+	background-color: rgba(0, 0, 0, 1);
+	z-index: 0;
+	&_img {
+		position: relative;
+		width: 80vw;
+		max-width: 1100px;
+		height: 30vw;
+		max-height: 400px;
+		clip-path: polygon(0 0, 100% 0, 50% 50%, 0% 100%, 0 100%);
+		// clip-path: rect(5px 5px 160px 145px round 20%);
+		overflow: hidden;
+		z-index: 0;
+		&::before {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			// background-color: rgba(0, 0, 0, 0.5);
+			background-image: linear-gradient(90deg,rgba(0, 0, 0, 1) 0%,rgba(0, 0, 0, 0.6) 50%);
+			z-index: 1;
+		}
+		img {
+			width: 100%;
+			height: 100%;
+			object-position: center;
+			object-fit: cover;
+			z-index: -1;
 		}
 	}
 }

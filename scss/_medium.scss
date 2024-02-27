@@ -137,6 +137,36 @@
 			}
 		}
 	}
+	.faq {
+		height: 800px;
+		padding: 60px 6vw;
+		h2 {
+			font-size: 3.8rem;
+		}
+		&_text{
+			width: 70%;
+			&-question{
+				h3{
+					font-size: 2rem;
+					// font-weight: 400;
+				}
+				&--answer{
+					p{
+						font-size: 1.6rem;
+						text-indent: 20px;
+
+					}
+				}
+			}
+		}
+		&_img{
+			position: absolute;
+			height: 700px;
+			left: auto;
+			right: -400px;
+		}
+
+	}
 	.disable {
 		display: none;
 	}
