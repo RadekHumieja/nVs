@@ -1,6 +1,7 @@
-const dataDay = document.querySelector('.nav_logo-data--day');
-const dataMonth = document.querySelector('.nav_logo-data--month');
-const dataYear = document.querySelector('.nav_logo-data--year');
+const dataDay = document.querySelectorAll('.nav_logo-data--day');
+const dataMonth = document.querySelectorAll('.nav_logo-data--month');
+const dataYear = document.querySelectorAll('.nav_logo-data--year');
+
 const navList = document.querySelector('.nav_list');
 const navBurger = document.querySelector('.nav_burger');
 const navAside = document.querySelector('.nav_aside');
@@ -25,9 +26,15 @@ const month = [
 	'Grudzień',
 ];
 const changingData = () => {
-	dataDay.textContent = getDay;
-	dataMonth.textContent = month[getMonth];
-	dataYear.textContent = getYear;
+	dataDay.forEach((day) => {
+		day.textContent = getDay;
+	});
+	dataMonth.forEach((mon) => {
+		mon.textContent = month[getMonth];
+	});
+	dataYear.forEach((year) => {
+		year.textContent = getYear;
+	});
 };
 
 const scrollActive = () => {
