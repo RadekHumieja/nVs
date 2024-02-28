@@ -34,7 +34,9 @@ document.addEventListener('DOMContentLoaded', () => {
 	setTimeout(() => {
 		main.classList.remove('disable');
 		shiftImg();
-		faQuestionReset();
+		setTimeout(() => {
+			faQuestionReset();
+		}, 1000);
 	}, 1000);
 });
 
