@@ -19,7 +19,7 @@ body {
 	background-color: col.$backgroundColor;
 	color: col.$globalTextColor;
 	overflow-x: hidden;
-	height: 600vh;
+	// height: 600vh;
 }
 
 .wrapper {
@@ -1054,7 +1054,7 @@ body {
 			background-image: linear-gradient(
 				90deg,
 				rgba(0, 0, 0, 1) 0%,
-				rgba(0, 0, 0, 0.8) 50%
+				rgba(0, 0, 0, 0.7) 50%
 			);
 			z-index: 1;
 		}

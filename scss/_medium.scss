@@ -3,6 +3,8 @@
 @media (min-width: 998px) {
 	.home {
 		&_box {
+			max-width: 650px;
+			max-height: 400px;
 			&-list {
 				ol {
 					scale: 1.1;
