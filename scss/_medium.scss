@@ -19,13 +19,13 @@
 		.offer_text-top {
 			padding: 0 20vw;
 			h1 {
-				font-size: 2.4rem;
+				font-size: 2.8rem;
 			}
 			h2 {
-				font-size: 2.2rem;
+				font-size: 2.6rem;
 			}
 			p {
-				font-size: 2rem;
+				font-size: 2.2rem;
 				text-indent: 40px;
 			}
 		}
@@ -47,7 +47,7 @@
 			padding: 0 20vw;
 			.check-offer,
 			.develop {
-				font-size: 2rem;
+				font-size: 2.2rem;
 			}
 			.approved-img {
 				bottom: 20px;
@@ -60,12 +60,12 @@
 		.examples_h2 {
 			width: 60%;
 			padding-left: 30px;
-			font-size: 2.4rem;
+			font-size: 2.8rem;
 			text-align: end;
 		}
 		&_content {
-			padding-top: 50px;
-			padding-bottom: 50px;
+			padding-top: 60px;
+			padding-bottom: 60px;
 		}
 		&_box {
 			display: flex;
@@ -77,9 +77,13 @@
 			width: 100%;
 			margin-top: 0px;
 			padding-right: 40px;
-			font-size: 2rem;
+			font-size: 2.2rem;
 			border: 2px solid col.$mojaPasja;
 			border-radius: 20px;
+			.examples_text-first{
+				font-size: 2.4rem;
+	
+			}
 		}
 		&_img {
 			width: 70%;
@@ -90,20 +94,20 @@
 		.examples_btns {
 			gap: 30px;
 			.check-offer {
-				font-size: 2rem;
+				font-size: 2.2rem;
 			}
 			.develop {
-				font-size: 2rem;
+				font-size: 2.2rem;
 			}
 		}
 	}
 	.education {
 		&_box {
 			&-h2 {
-				font-size: 2.4rem;
+				font-size: 2.8rem;
 			}
 			p {
-				font-size: 2rem;
+				font-size: 2.2rem;
 			}
 			&-slider {
 				// width: 80%;
@@ -111,7 +115,7 @@
 				.blog_cart {
 					width: 45%;
 					h4 {
-						font-size: 2rem;
+						font-size: 2.2rem;
 					}
 				}
 			}
@@ -127,13 +131,16 @@
 						font-size: 2rem;
 					}
 				}
+				h4{
+					font-size: 2.2rem;
+				}
 			}
 			&-btn {
 				justify-content: start;
 				margin-top: -50px;
 				a {
 					button {
-						font-size: 2rem;
+						font-size: 2.2rem;
 					}
 				}
 			}

@@ -21,16 +21,14 @@
 			bottom: -45px;
 		}
 	}
-    .home{
-        // min-height: 1100px;
-        &_box{
-            padding-top: 370px;
-        }
-    }
-	.offer{
-		
+	.home {
+		// min-height: 1100px;
+		&_box {
+			padding-top: 370px;
+		}
+	}
+	.offer {
 		.offer_text-top {
-			
 			// padding:0 5px;
 			h1 {
 				font-family: $H1;
@@ -39,11 +37,25 @@
 				display: inline-block;
 				// margin-left: 30px;
 			}
-			p{
+			p {
 				font-size: 1.4rem;
 				margin-top: 15px;
-				text-indent: 20px
-	
+				text-indent: 20px;
+			}
+		}
+	}
+	.education {
+		&_box {
+			&-slider {
+				// width: 80%;
+				// height: 80vw;
+				.blog_cart {
+					a {
+						h4 {
+							font-size: 1.4rem;
+						}
+					}
+				}
 			}
 		}
 	}

@@ -71,6 +71,12 @@
 				display: grid;
 				grid-template-columns: repeat(3, 1fr);
 				grid-template-rows: 1fr 20px 1fr;
+				font-size: 1.8rem;
+				ol{
+					img{
+						margin-bottom: 5px;
+					}
+				}
 				ol:nth-child(1) {
 					grid-row: 1/2;
 					grid-column: 1/2;
@@ -99,16 +105,19 @@
 		}
 	}
 	.offer {
+		&_map{
+			margin-top: 50px;
+		}
 		.offer_text-top {
 			padding: 0 12vw;
 			h1 {
-				font-size: 2.2rem;
+				font-size: 2.6rem;
 			}
 			h2 {
-				font-size: 2rem;
+				font-size: 2.4rem;
 			}
 			p {
-				font-size: 1.8rem;
+				font-size: 2rem;
 				margin-top: 30px;
 				text-indent: 20px;
 			}
@@ -138,7 +147,7 @@
 			padding: 0 12vw;
 			.check-offer,
 			.develop {
-				font-size: 1.8rem;
+				font-size: 2rem;
 			}
 			.approved-img {
 				// position: absolute;
@@ -150,21 +159,26 @@
 	}
 	.examples {
 		.examples_h2 {
-			font-size: 2.2rem;
+			font-size: 2.6rem;
 		}
 		&_text {
-			font-size: 1.8rem;
+			font-size: 2rem;
 			border: 3px solid col.$mojaPasja;
 			border-bottom: none;
+			.examples_text-first{
+				font-size: 2.4rem;
+	
+			}
 		}
 		.examples_btns {
 			flex-direction: row;
 			justify-content: start;
+			margin-top: 60px;
 			.check-offer {
-				font-size: 1.8rem;
+				font-size: 2rem;
 			}
 			.develop {
-				font-size: 1.8rem;
+				font-size: 2rem;
 			}
 		}
 	}
@@ -172,10 +186,10 @@
 	.education {
 		&_box {
 			&-h2 {
-				font-size: 2.2rem;
+				font-size: 2.6rem;
 			}
 			p {
-				font-size: 1.8rem;
+				font-size: 2rem;
 			}
 			&-slider {
 				width: 100%;
@@ -195,7 +209,7 @@
 						// animation: cartAnime 10s ease-in-out;
 					}
 					h4 {
-						font-size: 1.8rem;
+						font-size: 2rem;
 					}
 					// &-img {
 					// 	width: 100%;
@@ -222,11 +236,14 @@
 						// }
 					}
 				}
+				h4{
+					font-size: 2rem;
+				}
 			}
 			&-btn {
 				a {
 					button {
-						font-size: 1.8rem;
+						font-size: 2rem;
 					}
 				}
 			}

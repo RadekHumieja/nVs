@@ -642,12 +642,12 @@ body {
 }
 .offer_map {
   position: relative;
-  width: 75vw;
+  width: 85vw;
   max-width: 750px;
   height: 40vw;
   max-height: 400px;
   margin: 0 auto;
-  margin-top: 30px;
+  margin-top: 10px;
   z-index: 0;
 }
 .offer_map img {
@@ -716,9 +716,9 @@ body {
 .offer .offer_text-top h2 {
   font-family: "Montserrat", sans-serif;
   font-size: 1.6rem;
-  font-weight: 400;
+  font-weight: 500;
   display: inline-block;
-  margin-top: 30px;
+  margin-top: 50px;
 }
 .offer .offer_text-top p {
   font-size: 1.4rem;
@@ -776,7 +776,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 40px;
+  gap: 30px;
   margin: 60px auto;
 }
 .offer_btns .check-offer {
@@ -831,7 +831,7 @@ body {
   text-align: center;
 }
 .examples_content {
-  padding: 0 10vw;
+  padding: 60px 10vw;
 }
 .examples_text {
   margin-top: 30px;
@@ -842,6 +842,9 @@ body {
   border: 2px solid rgba(171, 23, 70, 0.6);
   border-bottom: none;
   border-radius: 20px 20px 0 0;
+}
+.examples_text .examples_text-first {
+  font-size: 1.6rem;
 }
 .examples_text p {
   margin-bottom: 40px;
@@ -926,11 +929,11 @@ body {
   background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.99) 0%, rgba(0, 0, 0, 0.7) 50%, rgb(0, 0, 0) 95%);
 }
 .education_box {
-  padding: 80px 10vw;
+  padding: 60px 10vw;
 }
 .education_box-h2 {
   font-family: "Tenor Sans", sans-serif;
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   font-weight: 600;
   text-align: center;
 }
@@ -990,12 +993,12 @@ body {
   left: 50%;
   transform: translate(-50%);
   padding: 30px 20px;
-  margin-top: 60px;
+  margin-top: 80px;
   background-color: rgba(0, 0, 0, 0.4);
   border-radius: 10px;
 }
 .education_box-map h3 {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 400;
   position: absolute;
   right: -30px;
@@ -1023,6 +1026,7 @@ body {
   color: rgba(27, 66, 208, 0.7921568627);
 }
 .education_box-map h4 {
+  font-size: 1.4rem;
   font-weight: 400;
   margin: 15px 0;
 }
@@ -1704,6 +1708,9 @@ body {
     margin-top: 15px;
     text-indent: 20px;
   }
+  .education_box-slider .blog_cart a h4 {
+    font-size: 1.4rem;
+  }
 }
 @media (min-width: 301px) and (max-width: 388px) {
   .nav_logo {
@@ -2026,6 +2033,10 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr 20px 1fr;
+    font-size: 1.8rem;
+  }
+  .home_box-list ol img {
+    margin-bottom: 5px;
   }
   .home_box-list ol:nth-child(1) {
     grid-row: 1/2;
@@ -2050,17 +2061,20 @@ body {
   .home_box-list ol:nth-child(n) {
     transform: translate(0);
   }
+  .offer_map {
+    margin-top: 50px;
+  }
   .offer .offer_text-top {
     padding: 0 12vw;
   }
   .offer .offer_text-top h1 {
-    font-size: 2.2rem;
+    font-size: 2.6rem;
   }
   .offer .offer_text-top h2 {
-    font-size: 2rem;
+    font-size: 2.4rem;
   }
   .offer .offer_text-top p {
-    font-size: 1.8rem;
+    font-size: 2rem;
     margin-top: 30px;
     text-indent: 20px;
   }
@@ -2088,7 +2102,7 @@ body {
   }
   .offer_btns .check-offer,
   .offer_btns .develop {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
   .offer_btns .approved-img {
     bottom: 20px;
@@ -2096,28 +2110,32 @@ body {
     width: 30vw;
   }
   .examples .examples_h2 {
-    font-size: 2.2rem;
+    font-size: 2.6rem;
   }
   .examples_text {
-    font-size: 1.8rem;
+    font-size: 2rem;
     border: 3px solid rgba(171, 23, 70, 0.6);
     border-bottom: none;
+  }
+  .examples_text .examples_text-first {
+    font-size: 2.4rem;
   }
   .examples .examples_btns {
     flex-direction: row;
     justify-content: start;
+    margin-top: 60px;
   }
   .examples .examples_btns .check-offer {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
   .examples .examples_btns .develop {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
   .education_box-h2 {
-    font-size: 2.2rem;
+    font-size: 2.6rem;
   }
   .education_box p {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
   .education_box-slider {
     width: 100%;
@@ -2134,7 +2152,7 @@ body {
     animation: cartAnimeR 10s ease-in-out;
   }
   .education_box-slider .blog_cart h4 {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
   .education_box-map {
     width: 50%;
@@ -2148,8 +2166,11 @@ body {
   .education_box-map ul li {
     font-size: 1.8rem;
   }
+  .education_box-map h4 {
+    font-size: 2rem;
+  }
   .education_box-btn a button {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
   .disable {
     display: none;
@@ -2170,13 +2191,13 @@ body {
     padding: 0 20vw;
   }
   .offer .offer_text-top h1 {
-    font-size: 2.4rem;
+    font-size: 2.8rem;
   }
   .offer .offer_text-top h2 {
-    font-size: 2.2rem;
+    font-size: 2.6rem;
   }
   .offer .offer_text-top p {
-    font-size: 2rem;
+    font-size: 2.2rem;
     text-indent: 40px;
   }
   .offer .offer_icon-box {
@@ -2196,7 +2217,7 @@ body {
   }
   .offer_btns .check-offer,
   .offer_btns .develop {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
   .offer_btns .approved-img {
     bottom: 20px;
@@ -2206,12 +2227,12 @@ body {
   .examples .examples_h2 {
     width: 60%;
     padding-left: 30px;
-    font-size: 2.4rem;
+    font-size: 2.8rem;
     text-align: end;
   }
   .examples_content {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
   .examples_box {
     display: flex;
@@ -2223,9 +2244,12 @@ body {
     width: 100%;
     margin-top: 0px;
     padding-right: 40px;
-    font-size: 2rem;
+    font-size: 2.2rem;
     border: 2px solid rgba(171, 23, 70, 0.6);
     border-radius: 20px;
+  }
+  .examples_text .examples_text-first {
+    font-size: 2.4rem;
   }
   .examples_img {
     width: 70%;
@@ -2237,22 +2261,22 @@ body {
     gap: 30px;
   }
   .examples .examples_btns .check-offer {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
   .examples .examples_btns .develop {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
   .education_box-h2 {
-    font-size: 2.4rem;
+    font-size: 2.8rem;
   }
   .education_box p {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
   .education_box-slider .blog_cart {
     width: 45%;
   }
   .education_box-slider .blog_cart h4 {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
   .education_box-map {
     width: 40%;
@@ -2264,12 +2288,15 @@ body {
   .education_box-map ul li {
     font-size: 2rem;
   }
+  .education_box-map h4 {
+    font-size: 2.2rem;
+  }
   .education_box-btn {
     justify-content: start;
     margin-top: -50px;
   }
   .education_box-btn a button {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
   .faq {
     height: 800px;
@@ -2303,10 +2330,10 @@ body {
     padding: 0 280px;
   }
   .offer .offer_text-top h1 {
-    font-size: 2.6rem;
+    font-size: 2.8rem;
   }
   .offer .offer_text-top h2 {
-    font-size: 2.4rem;
+    font-size: 2.5rem;
   }
   .offer .offer_text-top p {
     font-size: 2.2rem;
@@ -2326,7 +2353,7 @@ body {
   }
   .offer_btns .check-offer,
   .offer_btns .develop {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
   .offer_btns .approved-img {
     right: 120px;
