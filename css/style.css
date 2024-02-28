@@ -2011,12 +2011,7 @@ body {
     -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
   }
-  .home_box-list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr 20px 1fr;
-  }
-  .home_box-list::before {
+  .home_box::before {
     content: "";
     position: absolute;
     width: 85%;
@@ -2026,6 +2021,11 @@ body {
     transform: translate(-50%, -50%);
     background-color: rgba(255, 255, 255, 0.8);
     opacity: 0.3;
+  }
+  .home_box-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 20px 1fr;
   }
   .home_box-list ol:nth-child(1) {
     grid-row: 1/2;

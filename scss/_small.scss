@@ -56,21 +56,21 @@
 			padding: 0;
 			background-color: rgba(0, 0, 0, 0.6);
 			backdrop-filter: blur(10px);
+			&::before {
+				content: '';
+				position: absolute;
+				width: 85%;
+				height: 2px;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%,-50%);
+				background-color: col.$burgerColor;
+				opacity: 0.3;
+			}
 			&-list {
 				display: grid;
 				grid-template-columns: repeat(3, 1fr);
 				grid-template-rows: 1fr 20px 1fr;
-				&::before {
-					content: '';
-					position: absolute;
-					width: 85%;
-					height: 2px;
-					left: 50%;
-					top: 50%;
-					transform: translate(-50%,-50%);
-					background-color: col.$burgerColor;
-					opacity: 0.3;
-				}
 				ol:nth-child(1) {
 					grid-row: 1/2;
 					grid-column: 1/2;
