@@ -280,7 +280,7 @@ function setTimeStar(newStar) {
 const starsStart = () => {
 	starInterval = setInterval(() => {
 		starPozition();
-	}, 400);
+	}, 800);
 };
 function faQuestionToggle(e) {
 	const heightH3 = this.children[0].offsetHeight;
@@ -302,7 +302,6 @@ function faQuestionReset(adj = 0) {
 		const heightQuestion = faq.offsetHeight;
 		const heightAnswer = faq.children[2].offsetHeight;
 		const heightDifference = heightQuestion - heightAnswer + adj;
-		console.log(heightQuestion, heightAnswer, heightDifference);
 		faq.style.height = heightDifference + 'px';
 		faq.children[1].style.transform = `translate(0, -50%) rotate(90deg)`;
 	});

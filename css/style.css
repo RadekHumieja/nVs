@@ -2190,6 +2190,34 @@ body {
   .opinions_box .opinions_site-btn {
     font-size: 2rem;
   }
+  .footer_info {
+    display: inline-block;
+    width: 50%;
+  }
+  .footer_info-logo {
+    height: 300px;
+  }
+  .footer_info-logo .nav_logo {
+    scale: 2;
+  }
+  .footer_info-social {
+    margin-top: -40px;
+  }
+  .footer_info-social .fa-brands {
+    font-size: 4rem;
+  }
+  .footer_info-text {
+    font-size: 1.8rem;
+  }
+  .footer_menu {
+    display: inline-block;
+    width: 45%;
+    margin-bottom: 40px;
+    margin-left: 20px;
+  }
+  .footer_menu a {
+    font-size: 2.4rem;
+  }
   .disable {
     display: none;
   }

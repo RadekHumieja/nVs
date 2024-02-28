@@ -63,7 +63,7 @@
 				height: 2px;
 				left: 50%;
 				top: 50%;
-				transform: translate(-50%,-50%);
+				transform: translate(-50%, -50%);
 				background-color: col.$burgerColor;
 				opacity: 0.3;
 			}
@@ -72,8 +72,8 @@
 				grid-template-columns: repeat(3, 1fr);
 				grid-template-rows: 1fr 20px 1fr;
 				font-size: 1.8rem;
-				ol{
-					img{
+				ol {
+					img {
 						margin-bottom: 5px;
 					}
 				}
@@ -105,7 +105,7 @@
 		}
 	}
 	.offer {
-		&_map{
+		&_map {
 			margin-top: 50px;
 		}
 		.offer_text-top {
@@ -165,9 +165,8 @@
 			font-size: 2rem;
 			border: 3px solid col.$mojaPasja;
 			border-bottom: none;
-			.examples_text-first{
+			.examples_text-first {
 				font-size: 2.4rem;
-	
 			}
 		}
 		.examples_btns {
@@ -236,7 +235,7 @@
 						// }
 					}
 				}
-				h4{
+				h4 {
 					font-size: 2rem;
 				}
 			}
@@ -249,7 +248,7 @@
 			}
 		}
 	}
-	.opinions{
+	.opinions {
 		&_h2 {
 			// font-family: $H1;
 			font-size: 2.6rem;
@@ -257,28 +256,61 @@
 			// text-align: center;
 			// margin-bottom: 60px;
 		}
-		&_box{
-			.opinions_list{
+		&_box {
+			.opinions_list {
 				// height: 38vh;
-				&-card{
-					a{
+				&-card {
+					a {
 						font-size: 2.2rem;
 					}
-					p{
+					p {
 						font-size: 2rem;
 					}
 				}
 			}
-			.opinions_site{
+			.opinions_site {
 				font-size: 2rem;
-				&-btn{
+				&-btn {
 					font-size: 2rem;
-
 				}
 			}
 		}
 	}
+	.footer {
+		&_info {
+			display: inline-block;
+			width: 50%;
+			&-logo {
+				height: 300px;
+				.nav_logo {
+					// left: 25%;
+					scale: 2;
+				}
+			}
+			&-social {
+				margin-top: -40px;
+				.fa-brands {
+					font-size: 4rem;
+				}
+				// justify-content: start;
+			}
+			&-text{
+				font-size: 1.8rem;
+			}
+		}
+		&_menu{
+			display: inline-block;
+			width: 45%;
+			margin-bottom: 40px;
+			margin-left: 20px;
+			// bottom: 50px;
+			
+			a{
 
+				font-size: 2.4rem;
+			}
+		}
+	}
 	.disable {
 		display: none;
 	}
