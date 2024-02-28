@@ -29,11 +29,11 @@ let starInterval;
 // console.log(window.innerWidth,stars.innerWidth);
 
 document.addEventListener('DOMContentLoaded', () => {
-	faQuestion = document.querySelectorAll('.faq_text-question');
+	main.classList.remove('disable');
 	nav.classList.remove('disable');
 	home.classList.remove('disable');
 	setTimeout(() => {
-		main.classList.remove('disable');
+		faQuestion = document.querySelectorAll('.faq_text-question');
 		shiftImg();
 		faQuestionReset();
 	}, 1000);
@@ -298,7 +298,6 @@ function faQuestionToggle(e) {
 	}
 }
 function faQuestionReset(adj = 0) {
-	// faQuestion = document.querySelectorAll('.faq_text-question');
 	faQuestion.forEach((faq) => {
 		const heightQuestion = faq.offsetHeight;
 		const heightAnswer = faq.children[2].offsetHeight;
@@ -308,7 +307,6 @@ function faQuestionReset(adj = 0) {
 		faq.children[1].style.transform = `translate(0, -50%) rotate(90deg)`;
 	});
 }
-// faQuestionReset()
 let observer = new IntersectionObserver((el) => {
 	el.forEach((en) => {
 		if (
