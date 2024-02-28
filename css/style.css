@@ -267,6 +267,7 @@ body {
   background-color: #0b0b09;
   color: #fff;
   overflow-x: hidden;
+  width: 100%;
 }
 
 .wrapper {
@@ -1044,11 +1045,11 @@ body {
 }
 .opinions_padding {
   padding: 0 10px;
-  padding-top: 80px;
+  padding-top: 60px;
 }
 .opinions_h2 {
   font-family: "Tenor Sans", sans-serif;
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   font-weight: 600;
   text-align: center;
   margin-bottom: 60px;
@@ -1058,24 +1059,22 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 70px;
+  gap: 30px;
   width: 100%;
-  padding: 80px 0;
+  padding: 60px 0;
 }
 .opinions_box .opinions_list {
   display: flex;
   justify-content: center;
   align-items: start;
   gap: 50px;
-  width: 100%;
-  height: 45vh;
+  width: 90%;
 }
 .opinions_box .opinions_list-card {
   position: relative;
   max-width: 300px;
   padding: 30px 20px;
-  padding-top: 100px;
-  font-size: 1.2rem;
+  padding-top: 80px;
   text-align: center;
   border: 1px solid rgba(171, 23, 70, 0.6);
   border-radius: 15px;
@@ -1098,8 +1097,8 @@ body {
   left: 50%;
   top: -65px;
   transform: translate(-50%);
-  width: 140px;
-  height: 140px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   border: 2px solid rgba(171, 23, 70, 0.6);
   overflow: hidden;
@@ -1113,7 +1112,7 @@ body {
   height: 100%;
 }
 .opinions_box .opinions_list-card a {
-  font-size: 1.6em;
+  font-size: 1.6rem;
   font-weight: 600;
   text-decoration: none;
   color: #fff;
@@ -1132,12 +1131,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   z-index: 1;
 }
 .opinions_box .opinions_site-btn {
   margin: 0 30px;
-  font-size: 2rem;
+  font-size: 1.8rem;
   background: none;
   border: none;
   color: #fff;
@@ -1210,6 +1209,7 @@ body {
   position: relative;
   width: 100%;
   padding: 10px 15px;
+  padding-right: 30px;
   border: 1px solid rgba(171, 23, 70, 0.6);
   border-radius: 5px;
   background-color: rgba(55, 17, 17, 0.2);
@@ -1720,6 +1720,9 @@ body {
     right: -70px;
     bottom: -45px;
   }
+  .opinions_box .opinions_list {
+    height: 40vh;
+  }
 }
 @keyframes burgerNav {
   0% {
@@ -2172,6 +2175,21 @@ body {
   .education_box-btn a button {
     font-size: 2rem;
   }
+  .opinions_h2 {
+    font-size: 2.6rem;
+  }
+  .opinions_box .opinions_list-card a {
+    font-size: 2.2rem;
+  }
+  .opinions_box .opinions_list-card p {
+    font-size: 2rem;
+  }
+  .opinions_box .opinions_site {
+    font-size: 2rem;
+  }
+  .opinions_box .opinions_site-btn {
+    font-size: 2rem;
+  }
   .disable {
     display: none;
   }
@@ -2296,6 +2314,21 @@ body {
     margin-top: -50px;
   }
   .education_box-btn a button {
+    font-size: 2.2rem;
+  }
+  .opinions_h2 {
+    font-size: 2.8rem;
+  }
+  .opinions_box .opinions_list-card a {
+    font-size: 2.4rem;
+  }
+  .opinions_box .opinions_list-card p {
+    font-size: 2.2rem;
+  }
+  .opinions_box .opinions_site {
+    font-size: 2.2rem;
+  }
+  .opinions_box .opinions_site-btn {
     font-size: 2.2rem;
   }
   .faq {

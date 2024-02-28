@@ -70,4 +70,12 @@
 			bottom: -45px;
 		}
 	}
+	.opinions{
+		&_box{
+			.opinions_list{
+
+				height: 40vh;
+			}
+		}
+	}
 }

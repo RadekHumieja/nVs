@@ -8,7 +8,7 @@ const blog = document.querySelector('.education_box-slider');
 const opinions = document.querySelectorAll('.opinions_list-card');
 const siteNum = document.querySelector('.opinions_site-num');
 const stars = document.querySelector('.stars');
-const faQuestion = document.querySelectorAll('.faq_text-question');
+let faQuestion = document.querySelectorAll('.faq_text-question');
 
 let indexCart = 0;
 let resetSetTimeout = false;
@@ -29,14 +29,13 @@ let starInterval;
 // console.log(window.innerWidth,stars.innerWidth);
 
 document.addEventListener('DOMContentLoaded', () => {
+	faQuestion = document.querySelectorAll('.faq_text-question');
 	nav.classList.remove('disable');
 	home.classList.remove('disable');
 	setTimeout(() => {
 		main.classList.remove('disable');
 		shiftImg();
-		setTimeout(() => {
-			faQuestionReset();
-		}, 1000);
+		faQuestionReset();
 	}, 1000);
 });
 
@@ -210,10 +209,10 @@ function showCard(clickF1) {
 			opinions[i].style.opacity = 0;
 			const showSetTime = setTimeout(() => {
 				opinions[i].classList.remove('disable');
-			}, 320);
+			}, 300);
 			setTimeout(() => {
 				opinions[i].style.opacity = 1;
-			}, 420);
+			}, 320);
 		}
 	}
 }
@@ -299,15 +298,17 @@ function faQuestionToggle(e) {
 	}
 }
 function faQuestionReset(adj = 0) {
+	// faQuestion = document.querySelectorAll('.faq_text-question');
 	faQuestion.forEach((faq) => {
 		const heightQuestion = faq.offsetHeight;
 		const heightAnswer = faq.children[2].offsetHeight;
 		const heightDifference = heightQuestion - heightAnswer + adj;
+		console.log(heightQuestion, heightAnswer, heightDifference);
 		faq.style.height = heightDifference + 'px';
 		faq.children[1].style.transform = `translate(0, -50%) rotate(90deg)`;
 	});
 }
-
+// faQuestionReset()
 let observer = new IntersectionObserver((el) => {
 	el.forEach((en) => {
 		if (
