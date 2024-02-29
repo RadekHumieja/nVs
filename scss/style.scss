@@ -612,16 +612,9 @@ body {
 		}
 	}
 	&_img {
-		// display: flex;
-		// flex-wrap: wrap;
 		position: relative;
 		width: 100%;
 		height: 50vw;
-		// background-image: url(../img/portfolio/portfolio_n2c.png);
-		// background-image: url(../img/portfolio/portfolio_motopaczka.png);
-		// background-position:top left;
-		// background-size: cover;
-		// background-repeat: no-repeat;
 		border-radius: 0 0 20px 20px;
 		overflow: hidden;
 		z-index: 0;
@@ -641,7 +634,9 @@ body {
 			position: absolute;
 			// width: 100%;
 			height: 100%;
-			left: 0px;
+			// left: 0px;
+			top: 0;
+			transform: translateX(100%);
 			object-position: 0px 0px;
 			object-fit: cover;
 			// transform: translate(-30px);

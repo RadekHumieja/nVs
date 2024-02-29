@@ -25,6 +25,8 @@ let numSub;
 let starsWidth = stars.offsetWidth;
 let starsHeight = stars.offsetHeight;
 let starInterval;
+let animeTime = 6;
+let iSlider = 0;
 // console.log(starsWidth, starsHeight);
 // console.log(window.innerWidth,stars.innerWidth);
 
@@ -48,34 +50,15 @@ const responsive = () => {
 responsive();
 
 const shiftImg = () => {
-	for (let i = 0; i < imgPortfolioAll.length; i++) {
-		const img = imgPortfolioAll[i];
-		if (img.classList.contains('active')) {
-			const intervalImgPortfolio = setInterval(() => {
-				const widthImgBox = imgPortfolio.offsetWidth;
-				let widthImg = img.clientWidth;
-				let posImg = img.offsetLeft;
-				img.style.left = posImg - 1 + 'px';
-				if (posImg < widthImg * -1) {
-					clearInterval(intervalImgPortfolio);
-					img.classList.add('disable');
-					img.classList.remove('active');
-				} else if (posImg == (widthImg - widthImgBox) * -1) {
-					if (i + 1 >= imgPortfolioAll.length) {
-						imgPortfolioAll[0].classList.remove('disable');
-						imgPortfolioAll[0].classList.add('active');
-						imgPortfolioAll[0].style.left = widthImgBox + 'px';
-					} else {
-						imgPortfolioAll[i + 1].classList.remove('disable');
-						imgPortfolioAll[i + 1].classList.add('active');
-						imgPortfolioAll[i + 1].style.left = widthImgBox + 'px';
-					}
-					clearInterval(intervalImgPortfolio);
-					shiftImg();
-				}
-			}, 40);
-		}
-	}
+	imgPortfolioAll[iSlider].classList.remove('disable');
+	imgPortfolioAll[iSlider].style.animation = `slider ${animeTime}s`;
+	iSlider++;
+    if (iSlider === imgPortfolioAll.length) {
+        iSlider = 0;
+    }
+	setTimeout(() => {
+        shiftImg();
+	}, `${animeTime}000`/1.5);
 };
 const animeCart = () => {
 	if (resetSetTimeout) {
@@ -360,4 +343,9 @@ window.addEventListener('resize', () => {
 	faQuestionReset();
 });
 faQuestion.forEach((faq) => faq.addEventListener('click', faQuestionToggle));
+imgPortfolioAll.forEach((img) =>
+	img.addEventListener('animationend', () => {
+		img.classList.add('disable');
+	})
+);
 windowWidth();

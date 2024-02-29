@@ -259,3 +259,18 @@
 		transform: translate(10%, -70%);
 	}
 }
+@keyframes slider {
+	0% {
+		// display: block;
+		transform: translateX(100%);
+	}
+	40% {
+		transform: translateX(0%);
+	}
+	60% {
+		transform: translateX(0%);
+	}
+	100% {
+		transform: translateX(-100%);
+	}
+}

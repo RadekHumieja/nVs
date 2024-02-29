@@ -249,6 +249,20 @@
     transform: translate(10%, -70%);
   }
 }
+@keyframes slider {
+  0% {
+    transform: translateX(100%);
+  }
+  40% {
+    transform: translateX(0%);
+  }
+  60% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
 *,
 *::before,
 *::after {
@@ -885,7 +899,8 @@ body {
 .examples_img img {
   position: absolute;
   height: 100%;
-  left: 0px;
+  top: 0;
+  transform: translateX(100%);
   -o-object-position: 0px 0px;
      object-position: 0px 0px;
   -o-object-fit: cover;
@@ -1678,6 +1693,20 @@ body {
     transform: translate(10%, -70%);
   }
 }
+@keyframes slider {
+  0% {
+    transform: translateX(100%);
+  }
+  40% {
+    transform: translateX(0%);
+  }
+  60% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
 @media (max-width: 300px) {
   .nav_logo {
     position: relative;
@@ -1973,6 +2002,20 @@ body {
     opacity: 0;
     left: -100%;
     transform: translate(10%, -70%);
+  }
+}
+@keyframes slider {
+  0% {
+    transform: translateX(100%);
+  }
+  40% {
+    transform: translateX(0%);
+  }
+  60% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
   }
 }
 @media (min-width: 765px) {
