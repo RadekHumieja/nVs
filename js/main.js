@@ -25,7 +25,7 @@ let numSub;
 let starsWidth = stars.offsetWidth;
 let starsHeight = stars.offsetHeight;
 let starInterval;
-let animeTime = 6;
+let animeTime = 10;
 let iSlider = 0;
 // console.log(starsWidth, starsHeight);
 // console.log(window.innerWidth,stars.innerWidth);
