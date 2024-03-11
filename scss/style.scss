@@ -1229,15 +1229,32 @@ body {
 		border: 1px solid col.$burgerColor;
 		color: col.$burgerColor;
 		cursor: pointer;
-		transition: background-color .3s;
-		&:hover{
+		transition: background-color 0.3s;
+		&:hover {
 			background-color: rgba(79, 79, 79, 0.348);
 		}
 		// &:last-child{
 		// margin-right: 0;
 		// margin-left: auto;
-			
+
 		// }
+	}
+	&-tab {
+		// padding: 0 10px;
+		table {
+			width: 95%;
+			font-size: 1.4rem;
+			text-align: center;
+			color: col.$burgerColor;
+			border-collapse: collapse;
+			border-spacing: 10px;
+			tr {
+				td {
+					padding: 15px 0 5px 0;
+					border-bottom: 1px solid rgba(255, 255, 255, 0.185);
+				}
+			}
+		}
 	}
 }
 .active {

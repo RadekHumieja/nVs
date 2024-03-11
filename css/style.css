@@ -1490,6 +1490,18 @@ body {
 .offer_website-btn:hover {
   background-color: rgba(79, 79, 79, 0.348);
 }
+.offer_website-tab table {
+  width: 95%;
+  font-size: 1.4rem;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+  border-collapse: collapse;
+  border-spacing: 10px;
+}
+.offer_website-tab table tr td {
+  padding: 15px 0 5px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.185);
+}
 
 .active {
   color: rgb(150, 150, 217);
