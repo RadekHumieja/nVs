@@ -1240,8 +1240,9 @@ body {
 		// }
 	}
 	&-tab {
-		// padding: 0 10px;
+		padding: 0 10px;
 		table {
+			table-layout:fixed;
 			width: 95%;
 			font-size: 1.4rem;
 			text-align: center;
@@ -1252,6 +1253,10 @@ body {
 				td {
 					padding: 15px 0 5px 0;
 					border-bottom: 1px solid rgba(255, 255, 255, 0.185);
+					&:first-child {
+						
+						text-align: start;
+					}
 				}
 			}
 		}
