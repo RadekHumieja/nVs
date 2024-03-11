@@ -47,8 +47,11 @@
 					position: static;
 				}
 				&:nth-child(4) {
-				
-					transform: rotate(15deg) translate(0px);
+					transform-origin: 0px;
+					// transform: scale(0);
+					transform: rotate(15deg) translate(0px) scale(0);
+					animation: springBtnContact765 1.3s 1.3s
+						cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
 				}
 			}
 		}
