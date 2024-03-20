@@ -53,12 +53,12 @@ const shiftImg = () => {
 	imgPortfolioAll[iSlider].classList.remove('disable');
 	imgPortfolioAll[iSlider].style.animation = `slider ${animeTime}s`;
 	iSlider++;
-    if (iSlider === imgPortfolioAll.length) {
-        iSlider = 0;
-    }
+	if (iSlider === imgPortfolioAll.length) {
+		iSlider = 0;
+	}
 	setTimeout(() => {
-        shiftImg();
-	}, `${animeTime}000`/1.5);
+		shiftImg();
+	}, `${animeTime}000` / 1.5);
 };
 const animeCart = () => {
 	if (resetSetTimeout) {
@@ -289,6 +289,8 @@ function faQuestionReset(adj = 0) {
 		faq.children[1].style.transform = `translate(0, -50%) rotate(90deg)`;
 	});
 }
+
+
 let observer = new IntersectionObserver((el) => {
 	el.forEach((en) => {
 		if (

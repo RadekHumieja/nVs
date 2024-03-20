@@ -1245,6 +1245,9 @@ body {
 	}
 	&-tab {
 		padding: 0 10px;
+		&:nth-child(n+2){
+			display: none;
+		}
 		table {
 			position: relative;
 			table-layout: fixed;
@@ -1311,14 +1314,14 @@ body {
 						margin-left: 0;
 						margin-top: 20px;
 					}
-					&:nth-child(n+2) {
+					&:nth-child(n + 2) {
 						display: flex;
 						border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 					}
 					// .develop {
 					// 	font-size: 1rem;
 					// 	padding: 8px 16px;
-						
+
 					// 	&:hover {
 					// 		scale: 1.2;
 					// 	}
@@ -1372,13 +1375,19 @@ body {
 				.develop {
 					font-size: 1.1rem;
 					padding: 8px 16px;
-					
+
 					&:hover {
 						scale: 1.1;
 					}
 				}
 			}
 		}
+	}
+	.anime-item-end {
+		animation: endItem 0.3s forwards;
+	}
+	.anime-item-start {
+		animation: startItem 0.3s forwards;
 	}
 }
 .active {
