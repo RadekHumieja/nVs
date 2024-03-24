@@ -1,6 +1,12 @@
 @use './color' as col;
 @use './mixin' as *;
 @media (min-width: 998px) {
+	.nav {
+		&_list.nav_list-offer {
+			scale: 1;
+			right: -30px;
+		}
+	}
 	.home {
 		&_box {
 			max-width: 650px;
@@ -8,6 +14,48 @@
 			&-list {
 				ol {
 					scale: 1.1;
+				}
+			}
+		}
+	}
+	.header_offer {
+		height: 400px;
+		&-text {
+			h1 {
+				font-size: 3.8rem;
+			}
+		}
+	}
+	.offer_website {
+		&-btn {
+			font-size: 2rem;
+			width: 170px;
+			padding: 10px 20px;
+		}
+		&-tab {
+			table {
+				width: 80%;
+				font-size: 2rem;
+				tr {
+					th {
+						font-size: 2.2rem;
+					}
+				}
+			}
+		}
+		.packages_box {
+			&-end {
+				gap: 30px;
+				margin-top: 50px;
+				margin-bottom: 80px;
+				.develop {
+					// font-size: 2rem;
+					padding: 12px 24px;
+				}
+				.check-offer {
+					// font-size: 2.4rem;
+					@include checkOfferBtn;
+					padding: 12px 24px;
 				}
 			}
 		}
@@ -80,9 +128,8 @@
 			font-size: 2.2rem;
 			border: 2px solid col.$mojaPasja;
 			border-radius: 20px;
-			.examples_text-first{
+			.examples_text-first {
 				font-size: 2.4rem;
-	
 			}
 		}
 		&_img {
@@ -131,7 +178,7 @@
 						font-size: 2rem;
 					}
 				}
-				h4{
+				h4 {
 					font-size: 2.2rem;
 				}
 			}
@@ -146,7 +193,7 @@
 			}
 		}
 	}
-	.opinions{
+	.opinions {
 		&_h2 {
 			// font-family: $H1;
 			font-size: 2.8rem;
@@ -154,23 +201,22 @@
 			// text-align: center;
 			// margin-bottom: 60px;
 		}
-		&_box{
-			.opinions_list{
+		&_box {
+			.opinions_list {
 				// height: 38vh;
-				&-card{
-					a{
+				&-card {
+					a {
 						font-size: 2.4rem;
 					}
-					p{
+					p {
 						font-size: 2.2rem;
 					}
 				}
 			}
-			.opinions_site{
+			.opinions_site {
 				font-size: 2.2rem;
-				&-btn{
+				&-btn {
 					font-size: 2.2rem;
-
 				}
 			}
 		}
@@ -181,29 +227,27 @@
 		h2 {
 			font-size: 3.8rem;
 		}
-		&_text{
+		&_text {
 			width: 70%;
-			&-question{
-				h3{
+			&-question {
+				h3 {
 					font-size: 2rem;
 					// font-weight: 400;
 				}
-				&--answer{
-					p{
+				&--answer {
+					p {
 						font-size: 1.6rem;
 						text-indent: 20px;
-
 					}
 				}
 			}
 		}
-		&_img{
+		&_img {
 			position: absolute;
 			height: 700px;
 			left: auto;
 			right: -400px;
 		}
-
 	}
 	.disable {
 		display: none;

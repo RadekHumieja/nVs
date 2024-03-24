@@ -12,6 +12,7 @@
 			scale: 1.7;
 		}
 		&_list {
+			// font-size: 3rem;
 			scale: 1.3;
 			ol {
 				&:nth-child(5) {
@@ -44,6 +45,9 @@
 			gap: 10px;
 			scale: 0.9;
 			ol {
+				a {
+					font-size: 2.4rem;
+				}
 				&:nth-child(1) {
 					transform: rotate(10deg) translate(20px) scale(0);
 					animation: springBtnPasionV2 1.1s 1.6s
@@ -66,6 +70,9 @@
 			}
 			.facebook-btn {
 				right: 70px;
+				a {
+					font-size: 5rem;
+				}
 			}
 		}
 		&_aside.nav-fixed {
@@ -311,9 +318,15 @@
 		&-text {
 			h1 {
 				bottom: 25px;
-				left: 240px;
-				font-size: 2.6rem;
+				left: 260px;
+				font-size: 2.8rem;
 			}
+		}
+	}
+	[data-categoryItem='offer_website-packages'] {
+		gap: 25px;
+		.packages_box {
+			width: 40%;
 		}
 	}
 	.footer {

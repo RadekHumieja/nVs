@@ -8,7 +8,14 @@ class Filtration {
 	animeStart = (el) => {
 		el.classList.remove('anime-item-end');
 		el.style.opacity = 0;
-		el.style.display = 'block';
+		console.log(el);
+		if (el.dataset.categoryitem == 'offer_website-packages') {
+			
+			el.style.display = 'flex';
+		} else {
+			
+			el.style.display = 'block';
+		}
 		el.classList.add('anime-item-start');
 	};
 	animeEnd = (el) => {
