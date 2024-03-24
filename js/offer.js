@@ -15,7 +15,7 @@ class Filtration {
 		el.classList.remove('anime-item-start');
 		el.classList.add('anime-item-end');
 	};
-	activeBtn = (el) => {
+	activeBtn = () => {
 		const btns = document.querySelectorAll('.offer_website-btn');
 		btns.forEach((btn) => btn.classList.remove('active_gray'));
 		this.item.classList.add('active_gray');
