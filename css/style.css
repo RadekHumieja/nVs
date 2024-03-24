@@ -44,6 +44,29 @@
     transform: scale(1) rotate(-10deg);
   }
 }
+@keyframes springBtnPasionV2 {
+  0% {
+    transform: scale(0) rotate(-10deg) translate(60px, -20px);
+  }
+  60% {
+    transform: scale(1.3) rotate(-10deg) translate(60px, -20px);
+  }
+  70% {
+    transform: scale(0.8) rotate(-10deg) translate(60px, -20px);
+  }
+  80% {
+    transform: scale(1.2) rotate(-10deg) translate(60px, -20px);
+  }
+  90% {
+    transform: scale(0.9) rotate(-10deg) translate(60px, -20px);
+  }
+  95% {
+    transform: scale(1.1) rotate(-10deg) translate(60px, -20px);
+  }
+  100% {
+    transform: scale(1) rotate(-10deg) translate(60px, -20px);
+  }
+}
 @keyframes springBtnOffer {
   0% {
     transform: scale(0) rotate(5deg);
@@ -115,25 +138,25 @@
 }
 @keyframes springBtnContact765 {
   0% {
-    transform: scale(0) rotate(15deg) translate(0px);
+    transform: scale(0) rotate(15deg) translate(-180px, -40px);
   }
   60% {
-    transform: scale(1.3) rotate(15deg) translate(0px);
+    transform: scale(1.3) rotate(15deg) translate(-180px, -40px);
   }
   70% {
-    transform: scale(0.8) rotate(15deg) translate(0px);
+    transform: scale(0.8) rotate(15deg) translate(-180px, -40px);
   }
   80% {
-    transform: scale(1.2) rotate(15deg) translate(0px);
+    transform: scale(1.2) rotate(15deg) translate(-180px, -40px);
   }
   90% {
-    transform: scale(0.9) rotate(15deg) translate(0px);
+    transform: scale(0.9) rotate(15deg) translate(-180px, -40px);
   }
   95% {
-    transform: scale(1.1) rotate(15deg) translate(0px);
+    transform: scale(1.1) rotate(15deg) translate(-180px, -40px);
   }
   100% {
-    transform: scale(1) rotate(15deg) translate(0px);
+    transform: scale(1) rotate(15deg) translate(-180px, -40px);
   }
 }
 @keyframes springBtnBlog {
@@ -180,6 +203,29 @@
   }
   100% {
     transform: scale(1) rotate(-13deg);
+  }
+}
+@keyframes springBtnBlog765V2 {
+  0% {
+    transform: scale(0) rotate(-13deg) translate(-150px, 16px);
+  }
+  60% {
+    transform: scale(1.3) rotate(-13deg) translate(-150px, 16px);
+  }
+  70% {
+    transform: scale(0.8) rotate(-13deg) translate(-150px, 16px);
+  }
+  80% {
+    transform: scale(1.2) rotate(-13deg) translate(-150px, 16px);
+  }
+  90% {
+    transform: scale(0.9) rotate(-13deg) translate(-150px, 16px);
+  }
+  95% {
+    transform: scale(1.1) rotate(-13deg) translate(-150px, 16px);
+  }
+  100% {
+    transform: scale(1) rotate(-13deg) translate(-150px, 16px);
   }
 }
 @keyframes springBtnBuyNow {
@@ -562,7 +608,7 @@ body {
 .nav_list .facebook-btn,
 .nav .nav_aside .facebook-btn {
   position: absolute;
-  right: -70px;
+  right: -60px;
   bottom: -50px;
   z-index: -1;
   opacity: 0;
@@ -1385,7 +1431,7 @@ body {
   color: #3b5998;
 }
 .footer_info-social .fa-brands {
-  font-size: 3rem;
+  font-size: 3.5rem;
 }
 .footer_info-text {
   font-size: 1.4rem;
@@ -1539,6 +1585,29 @@ body {
     transform: scale(1) rotate(-10deg);
   }
 }
+@keyframes springBtnPasionV2 {
+  0% {
+    transform: scale(0) rotate(-10deg) translate(60px, -20px);
+  }
+  60% {
+    transform: scale(1.3) rotate(-10deg) translate(60px, -20px);
+  }
+  70% {
+    transform: scale(0.8) rotate(-10deg) translate(60px, -20px);
+  }
+  80% {
+    transform: scale(1.2) rotate(-10deg) translate(60px, -20px);
+  }
+  90% {
+    transform: scale(0.9) rotate(-10deg) translate(60px, -20px);
+  }
+  95% {
+    transform: scale(1.1) rotate(-10deg) translate(60px, -20px);
+  }
+  100% {
+    transform: scale(1) rotate(-10deg) translate(60px, -20px);
+  }
+}
 @keyframes springBtnOffer {
   0% {
     transform: scale(0) rotate(5deg);
@@ -1610,25 +1679,25 @@ body {
 }
 @keyframes springBtnContact765 {
   0% {
-    transform: scale(0) rotate(15deg) translate(0px);
+    transform: scale(0) rotate(15deg) translate(-180px, -40px);
   }
   60% {
-    transform: scale(1.3) rotate(15deg) translate(0px);
+    transform: scale(1.3) rotate(15deg) translate(-180px, -40px);
   }
   70% {
-    transform: scale(0.8) rotate(15deg) translate(0px);
+    transform: scale(0.8) rotate(15deg) translate(-180px, -40px);
   }
   80% {
-    transform: scale(1.2) rotate(15deg) translate(0px);
+    transform: scale(1.2) rotate(15deg) translate(-180px, -40px);
   }
   90% {
-    transform: scale(0.9) rotate(15deg) translate(0px);
+    transform: scale(0.9) rotate(15deg) translate(-180px, -40px);
   }
   95% {
-    transform: scale(1.1) rotate(15deg) translate(0px);
+    transform: scale(1.1) rotate(15deg) translate(-180px, -40px);
   }
   100% {
-    transform: scale(1) rotate(15deg) translate(0px);
+    transform: scale(1) rotate(15deg) translate(-180px, -40px);
   }
 }
 @keyframes springBtnBlog {
@@ -1675,6 +1744,29 @@ body {
   }
   100% {
     transform: scale(1) rotate(-13deg);
+  }
+}
+@keyframes springBtnBlog765V2 {
+  0% {
+    transform: scale(0) rotate(-13deg) translate(-150px, 16px);
+  }
+  60% {
+    transform: scale(1.3) rotate(-13deg) translate(-150px, 16px);
+  }
+  70% {
+    transform: scale(0.8) rotate(-13deg) translate(-150px, 16px);
+  }
+  80% {
+    transform: scale(1.2) rotate(-13deg) translate(-150px, 16px);
+  }
+  90% {
+    transform: scale(0.9) rotate(-13deg) translate(-150px, 16px);
+  }
+  95% {
+    transform: scale(1.1) rotate(-13deg) translate(-150px, 16px);
+  }
+  100% {
+    transform: scale(1) rotate(-13deg) translate(-150px, 16px);
   }
 }
 @keyframes springBtnBuyNow {
@@ -1899,6 +1991,29 @@ body {
     transform: scale(1) rotate(-10deg);
   }
 }
+@keyframes springBtnPasionV2 {
+  0% {
+    transform: scale(0) rotate(-10deg) translate(60px, -20px);
+  }
+  60% {
+    transform: scale(1.3) rotate(-10deg) translate(60px, -20px);
+  }
+  70% {
+    transform: scale(0.8) rotate(-10deg) translate(60px, -20px);
+  }
+  80% {
+    transform: scale(1.2) rotate(-10deg) translate(60px, -20px);
+  }
+  90% {
+    transform: scale(0.9) rotate(-10deg) translate(60px, -20px);
+  }
+  95% {
+    transform: scale(1.1) rotate(-10deg) translate(60px, -20px);
+  }
+  100% {
+    transform: scale(1) rotate(-10deg) translate(60px, -20px);
+  }
+}
 @keyframes springBtnOffer {
   0% {
     transform: scale(0) rotate(5deg);
@@ -1970,25 +2085,25 @@ body {
 }
 @keyframes springBtnContact765 {
   0% {
-    transform: scale(0) rotate(15deg) translate(0px);
+    transform: scale(0) rotate(15deg) translate(-180px, -40px);
   }
   60% {
-    transform: scale(1.3) rotate(15deg) translate(0px);
+    transform: scale(1.3) rotate(15deg) translate(-180px, -40px);
   }
   70% {
-    transform: scale(0.8) rotate(15deg) translate(0px);
+    transform: scale(0.8) rotate(15deg) translate(-180px, -40px);
   }
   80% {
-    transform: scale(1.2) rotate(15deg) translate(0px);
+    transform: scale(1.2) rotate(15deg) translate(-180px, -40px);
   }
   90% {
-    transform: scale(0.9) rotate(15deg) translate(0px);
+    transform: scale(0.9) rotate(15deg) translate(-180px, -40px);
   }
   95% {
-    transform: scale(1.1) rotate(15deg) translate(0px);
+    transform: scale(1.1) rotate(15deg) translate(-180px, -40px);
   }
   100% {
-    transform: scale(1) rotate(15deg) translate(0px);
+    transform: scale(1) rotate(15deg) translate(-180px, -40px);
   }
 }
 @keyframes springBtnBlog {
@@ -2035,6 +2150,29 @@ body {
   }
   100% {
     transform: scale(1) rotate(-13deg);
+  }
+}
+@keyframes springBtnBlog765V2 {
+  0% {
+    transform: scale(0) rotate(-13deg) translate(-150px, 16px);
+  }
+  60% {
+    transform: scale(1.3) rotate(-13deg) translate(-150px, 16px);
+  }
+  70% {
+    transform: scale(0.8) rotate(-13deg) translate(-150px, 16px);
+  }
+  80% {
+    transform: scale(1.2) rotate(-13deg) translate(-150px, 16px);
+  }
+  90% {
+    transform: scale(0.9) rotate(-13deg) translate(-150px, 16px);
+  }
+  95% {
+    transform: scale(1.1) rotate(-13deg) translate(-150px, 16px);
+  }
+  100% {
+    transform: scale(1) rotate(-13deg) translate(-150px, 16px);
   }
 }
 @keyframes springBtnBuyNow {
@@ -2196,16 +2334,27 @@ body {
   .nav_list.nav_list-offer {
     flex-direction: row;
     top: 140px;
-    gap: 0;
+    right: -70px;
+    gap: 10px;
     scale: 0.9;
+  }
+  .nav_list.nav_list-offer ol:nth-child(1) {
+    transform: rotate(10deg) translate(20px) scale(0);
+    animation: springBtnPasionV2 1.1s 1.6s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
   }
   .nav_list.nav_list-offer ol:nth-child(5) {
     position: static;
+    transform-origin: -110px 30px;
+    transform: rotate(-13deg) translate(-150px, -20px) scale(0);
+    animation: springBtnBlog765V2 1.1s 1.6s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
   }
   .nav_list.nav_list-offer ol:nth-child(4) {
-    transform-origin: 0px;
-    transform: rotate(15deg) translate(0px) scale(0);
+    transform-origin: -110px -20px;
+    transform: rotate(15deg) translate(-180px, -40px) scale(0);
     animation: springBtnContact765 1.3s 1.3s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
+  }
+  .nav_list.nav_list-offer .facebook-btn {
+    right: 70px;
   }
   .nav_aside.nav-fixed {
     width: 30%;
@@ -2395,6 +2544,11 @@ body {
   }
   .opinions_box .opinions_site-btn {
     font-size: 2rem;
+  }
+  .header_offer-text h1 {
+    bottom: 25px;
+    left: 240px;
+    font-size: 2.6rem;
   }
   .footer_info {
     display: inline-block;

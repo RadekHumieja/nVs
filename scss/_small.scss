@@ -40,19 +40,32 @@
 		&_list.nav_list-offer {
 			flex-direction: row;
 			top: 140px;
-			gap: 0;
+			right: -70px;
+			gap: 10px;
 			scale: 0.9;
 			ol {
+				&:nth-child(1) {
+					transform: rotate(10deg) translate(20px) scale(0);
+					animation: springBtnPasionV2 1.1s 1.6s
+						cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
+				}
 				&:nth-child(5) {
 					position: static;
+					transform-origin: -110px 30px;
+					transform: rotate(-13deg) translate(-150px, -20px) scale(0);
+					animation: springBtnBlog765V2 1.1s 1.6s
+						cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
 				}
 				&:nth-child(4) {
-					transform-origin: 0px;
+					transform-origin: -110px -20px;
 					// transform: scale(0);
-					transform: rotate(15deg) translate(0px) scale(0);
+					transform: rotate(15deg) translate(-180px, -40px) scale(0);
 					animation: springBtnContact765 1.3s 1.3s
 						cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
 				}
+			}
+			.facebook-btn {
+				right: 70px;
 			}
 		}
 		&_aside.nav-fixed {
@@ -291,6 +304,15 @@
 				&-btn {
 					font-size: 2rem;
 				}
+			}
+		}
+	}
+	.header_offer {
+		&-text {
+			h1 {
+				bottom: 25px;
+				left: 240px;
+				font-size: 2.6rem;
 			}
 		}
 	}

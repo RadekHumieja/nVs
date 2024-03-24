@@ -51,6 +51,29 @@
 		transform: scale(1) rotate(-10deg);
 	}
 }
+@keyframes springBtnPasionV2 {
+	0% {
+		transform: scale(0) rotate(-10deg) translate(60px,-20px);
+	}
+	60% {
+		transform: scale(1.3) rotate(-10deg) translate(60px,-20px);
+	}
+	70% {
+		transform: scale(0.8) rotate(-10deg) translate(60px,-20px);
+	}
+	80% {
+		transform: scale(1.2) rotate(-10deg) translate(60px,-20px);
+	}
+	90% {
+		transform: scale(0.9) rotate(-10deg) translate(60px,-20px);
+	}
+	95% {
+		transform: scale(1.1) rotate(-10deg) translate(60px,-20px);
+	}
+	100% {
+		transform: scale(1) rotate(-10deg) translate(60px,-20px);
+	}
+}
 @keyframes springBtnOffer {
 	0% {
 		transform: scale(0) rotate(5deg);
@@ -122,25 +145,25 @@
 }
 @keyframes springBtnContact765 {
 	0% {
-		transform: scale(0) rotate(15deg) translate(0px);
+		transform: scale(0) rotate(15deg) translate(-180px,-40px);
 	}
 	60% {
-		transform: scale(1.3) rotate(15deg) translate(0px);
+		transform: scale(1.3) rotate(15deg) translate(-180px,-40px);
 	}
 	70% {
-		transform: scale(0.8) rotate(15deg) translate(0px);
+		transform: scale(0.8) rotate(15deg) translate(-180px,-40px);
 	}
 	80% {
-		transform: scale(1.2) rotate(15deg) translate(0px);
+		transform: scale(1.2) rotate(15deg) translate(-180px,-40px);
 	}
 	90% {
-		transform: scale(0.9) rotate(15deg) translate(0px);
+		transform: scale(0.9) rotate(15deg) translate(-180px,-40px);
 	}
 	95% {
-		transform: scale(1.1) rotate(15deg) translate(0px);
+		transform: scale(1.1) rotate(15deg) translate(-180px,-40px);
 	}
 	100% {
-		transform: scale(1) rotate(15deg) translate(0px);
+		transform: scale(1) rotate(15deg) translate(-180px,-40px);
 	}
 }
 @keyframes springBtnBlog {
@@ -187,6 +210,29 @@
 	}
 	100% {
 		transform: scale(1) rotate(-13deg);
+	}
+}
+@keyframes springBtnBlog765V2 {
+	0% {
+		transform: scale(0) rotate(-13deg) translate(-150px,16px);
+	}
+	60% {
+		transform: scale(1.3) rotate(-13deg) translate(-150px,16px);
+	}
+	70% {
+		transform: scale(0.8) rotate(-13deg) translate(-150px,16px);
+	}
+	80% {
+		transform: scale(1.2) rotate(-13deg) translate(-150px,16px);
+	}
+	90% {
+		transform: scale(0.9) rotate(-13deg) translate(-150px,16px);
+	}
+	95% {
+		transform: scale(1.1) rotate(-13deg) translate(-150px,16px);
+	}
+	100% {
+		transform: scale(1) rotate(-13deg) translate(-150px,16px);
 	}
 }
 @keyframes springBtnBuyNow {

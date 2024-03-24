@@ -146,7 +146,7 @@ body {
 	.nav_aside {
 		position: absolute;
 		// left: 50%;
-		right: 50px;
+		right: 80px;
 		top: 30px;
 		// transform: translate(-50%);
 		display: flex;
@@ -237,7 +237,7 @@ body {
 			position: absolute;
 			// top: 240px;
 			// left: 50px;
-			right: -70px;
+			right: -60px;
 			bottom: -50px;
 			z-index: -1;
 			// transform: translate(-50%);
@@ -313,7 +313,7 @@ body {
 		h1 {
 			position: absolute;
 			bottom: 25px;
-			left: 20px;
+			left: 40px;
 			font-size: 2.4rem;
 			text-shadow: 0px 0px 5px rgb(0, 0, 0);
 			color: col.$burgerColor;
@@ -465,6 +465,7 @@ body {
 				align-items: center;
 				gap: 15px;
 				margin-top: 30px;
+                margin-bottom: 50px;
 				.price {
 					// position: relative;
 					flex-shrink: 0;
@@ -474,7 +475,7 @@ body {
 					color: green;
 				}
 				.develop {
-					font-size: 1.1rem;
+					font-size: 1.2rem;
 					padding: 8px 16px;
 
 					&:hover {
@@ -482,7 +483,7 @@ body {
 					}
 				}
                 .check-offer {
-                    font-size: 1.2rem;
+                    font-size: 1.4rem;
                     @include checkOfferBtn;
                     padding: 8px 16px;
     
@@ -500,6 +501,159 @@ body {
 	}
 	.anime-item-start {
 		animation: startItem 0.3s forwards;
+	}
+}
+.footer {
+	position: relative;
+	background-color: rgba(0, 0, 0, 1);
+	z-index: 0;
+	&_box {
+		position: relative;
+		padding: 0 8vw;
+	}
+	&_img {
+		position: absolute;
+		width: 80vw;
+		max-width: 1100px;
+		height: 50vw;
+		max-height: 400px;
+		clip-path: polygon(0 0, 100% 0, 50% 50%, 0% 100%, 0 100%);
+		// clip-path: rect(5px 5px 160px 145px round 20%);
+		overflow: hidden;
+		z-index: -1;
+		&::before {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			// background-color: rgba(0, 0, 0, 0.5);
+			background-image: linear-gradient(
+				90deg,
+				rgba(0, 0, 0, 1) 0%,
+				rgba(0, 0, 0, 0.7) 50%
+			);
+			z-index: 1;
+		}
+		img {
+			width: 100%;
+			height: 100%;
+			object-position: 0px -100px;
+			object-fit: cover;
+			z-index: -1;
+		}
+	}
+	&_info {
+		// position: static;
+		&-logo {
+			position: relative;
+			height: 50vw;
+
+			.nav_logo {
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+				margin: 0;
+			}
+		}
+		&-social {
+			display: flex;
+			justify-content: center;
+			margin-top: -10px;
+			margin-bottom: 20px;
+			a {
+				text-decoration: none;
+				color: col.$facebookColor;
+			}
+			.fa-brands {
+				font-size: 3.5rem;
+			}
+		}
+		&-text {
+			font-size: 1.4rem;
+			padding: 10px;
+			text-align: center;
+			// text-indent: 15px;
+		}
+	}
+	&_menu {
+		ul {
+			font-size: 1.8rem;
+			padding: 20px 0;
+			padding-bottom: 80px;
+			list-style: none;
+			text-align: center;
+			li {
+				position: relative;
+				padding: 10px 0;
+				a {
+					text-decoration: none;
+					color: col.$burgerColor;
+					cursor: pointer;
+					transition: color 0.3s;
+					&:hover {
+						// scale: 1.01;
+						color: col.$ofertaHover;
+					}
+				}
+				&::before {
+					content: '';
+					position: absolute;
+					width: 50%;
+					height: 1px;
+					left: 50%;
+					bottom: -1px;
+					transform: translate(-50%);
+					background-color: col.$burgerColor;
+					opacity: 0.3;
+				}
+				&:last-child {
+					// @include btn-buy-now;
+					transform: scale(0.6);
+					z-index: 0;
+					animation: springBtnBuyNow 1s 0.3s
+						cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
+					transition: scale 0.3s;
+					&:hover {
+						scale: 1.2;
+					}
+					a {
+						color: col.$buyNowBackground;
+					}
+					&::before {
+						content: none;
+					}
+				}
+			}
+		}
+	}
+}
+.return {
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	right: 0;
+	bottom: 0;
+	img {
+		width: 100%;
+		height: 100%;
+	}
+	&_arrows {
+		position: absolute;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 50%;
+		bottom: 20%;
+		right: 0;
+		font-size: 1.8rem;
+		color: black;
+		cursor: pointer;
+		.fa-chevron-up:last-child {
+			margin-top: -25px;
+		}
 	}
 }
 .active {
