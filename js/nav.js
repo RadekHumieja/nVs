@@ -11,6 +11,8 @@ const getDay = date.getDate();
 const getMonth = date.getMonth();
 const getYear = date.getFullYear();
 
+const buyNowNav = document.querySelectorAll('.btn_buy-now');
+
 const month = [
 	'Styczeń',
 	'Luty',
@@ -68,3 +70,8 @@ changingData();
 window.addEventListener('scroll', scrollActive);
 window.addEventListener('click', clickWindow);
 navBurger.addEventListener('click', burgerClick);
+buyNowNav.forEach((buy) =>
+	buy.addEventListener('click', (e) => {
+		localStorage.setItem('buynow', 'true');
+	})
+);

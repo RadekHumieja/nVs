@@ -1,3 +1,4 @@
+const buyNow = document.querySelectorAll('.btn_buy-now');
 class Filtration {
 	constructor(item) {
 		this.item = document.querySelector(item);
@@ -8,12 +9,9 @@ class Filtration {
 	animeStart = (el) => {
 		el.classList.remove('anime-item-end');
 		el.style.opacity = 0;
-		console.log(el);
 		if (el.dataset.categoryitem == 'offer_website-packages') {
-			
 			el.style.display = 'flex';
 		} else {
-			
 			el.style.display = 'block';
 		}
 		el.classList.add('anime-item-start');
@@ -35,6 +33,7 @@ class Filtration {
 				if (categoryItem == this.category) {
 					this.animeStart(el);
 					this.activeBtn(el);
+					localStorage.removeItem('buynow');
 				} else {
 					el.style.display = 'none';
 				}
@@ -45,3 +44,15 @@ class Filtration {
 function filter(el) {
 	let filtration = new Filtration(el);
 }
+function checkBuyNow() {
+	if (localStorage.getItem('buynow') !== null) {
+		filter('.offer_website-packages');
+	}
+}
+checkBuyNow();
+buyNow.forEach((buy) =>
+	buy.addEventListener('click', (e) => {
+		localStorage.setItem('buynow', 'true');
+		checkBuyNow();
+	})
+);

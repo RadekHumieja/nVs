@@ -323,6 +323,19 @@
 			}
 		}
 	}
+	.offer_website {
+		.packages_box {
+			// position: relative;
+			display: flex;
+			flex-direction: column;
+			&-end {
+				height: 100%;
+				justify-content: end;
+				// flex-shrink: 0;
+				
+			}
+		}
+	}
 	[data-categoryItem='offer_website-packages'] {
 		gap: 25px;
 		.packages_box {

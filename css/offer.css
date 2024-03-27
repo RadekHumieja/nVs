@@ -2040,6 +2040,14 @@ body {
     left: 260px;
     font-size: 2.8rem;
   }
+  .offer_website .packages_box {
+    display: flex;
+    flex-direction: column;
+  }
+  .offer_website .packages_box-end {
+    height: 100%;
+    justify-content: end;
+  }
   [data-categoryItem=offer_website-packages] {
     gap: 25px;
   }
@@ -2109,21 +2117,17 @@ body {
     font-size: 2.2rem;
   }
   .offer_website .packages_box-end {
-    gap: 30px;
-    margin-top: 50px;
-    margin-bottom: 80px;
+    gap: 20px;
+    margin-top: 20px;
   }
   .offer_website .packages_box-end .develop {
     padding: 12px 24px;
   }
   .offer_website .packages_box-end .check-offer {
-    padding: 10px 30px;
-    background-color: #ffde59;
-    border: transparent;
-    border-radius: 50px;
-    text-decoration: none;
-    color: #0b0b09;
     padding: 12px 24px;
+  }
+  .offer_website [data-categoryItem=offer_website-packages] .packages_box {
+    width: 30%;
   }
   .offer_map {
     margin-top: 60px;
