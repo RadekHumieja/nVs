@@ -1,0 +1,599 @@
+@use './color' as col;
+@use './img' as img;
+@use './mixin' as *;
+@use './animation' as *;
+@use './font' as *;
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+body {
+	font-family: $global;
+	background-color: col.$backgroundColor;
+	color: col.$globalTextColor;
+	overflow-x: hidden;
+	// height: 600vh;
+	width: 100%;
+}
+
+.wrapper {
+	position: relative;
+	width: 100%;
+	max-width: 1280px;
+	margin: 0 auto;
+	&_flex {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+}
+// NAVIGATION
+.nav {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	// height: 100%;
+	display: flex;
+	justify-content: center;
+	z-index: 1;
+	// BURGER
+	&_burger {
+		display: none;
+		position: fixed;
+		right: 30px;
+		top: 25px;
+		opacity: 1;
+		scale: 1;
+		transition: scale 0.5s;
+		animation: burgerNav 1s;
+		z-index: 4;
+		&.burger-wrapper {
+			right: 50%;
+			transform-origin: 600px;
+			transform: translate(600px);
+		}
+		&-btn {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-evenly;
+			width: 50px;
+			height: 50px;
+			padding: 10px;
+			background: transparent;
+			border: transparent;
+			cursor: pointer;
+			&--item {
+				width: 100%;
+				height: 4px;
+				background-color: col.$burgerColor;
+				border-radius: 2px;
+				&:nth-child(2) {
+					width: 70%;
+					align-self: flex-end;
+				}
+				&:nth-child(3) {
+					width: 30%;
+					align-self: flex-end;
+				}
+			}
+		}
+	}
+	// LOGO
+	&_logo {
+		font-size: 1.4rem;
+		margin: 10px;
+		margin-top: 20px;
+		text-align: center;
+		color: col.$logoColor;
+		text-decoration: none;
+		scale: 1.5;
+		transform-origin: 0 0;
+		opacity: 0;
+		animation: logoShow 2s forwards;
+		&-data {
+			display: flex;
+			justify-content: center;
+			gap: 5px;
+			font-size: 0.7em;
+		}
+		&-name {
+			position: relative;
+			font-family: $logoName;
+			font-size: 3.5em;
+			font-weight: 500;
+			.logo-v {
+				font-size: 1.2em;
+				color: col.$logoV;
+				opacity: 0.9;
+				z-index: 0;
+			}
+			.logo-n {
+				position: absolute;
+				top: -10.6px;
+				left: 50%;
+				transform: translate(-23.2px);
+				font-size: 1.2em;
+				z-index: -1;
+			}
+			.logo-s {
+				position: absolute;
+				bottom: -8px;
+				left: 50%;
+				font-size: 1.2em;
+				opacity: 0.9;
+				z-index: 1;
+			}
+		}
+		&-seccond {
+			font-family: $logoSeccond;
+			font-size: 1.4em;
+			line-height: 0.7em;
+			text-transform: uppercase;
+			transform: translate(0px, -60%);
+			opacity: 0.7;
+			z-index: -2;
+		}
+	}
+	// MENU
+	&_list,
+	.nav_aside {
+		position: absolute;
+		// left: 50%;
+		right: 80px;
+		top: 30px;
+		// transform: translate(-50%);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 5px;
+		scale: 0.9;
+		z-index: 3;
+		// transition: transform 1s, opacity 1s;
+		a {
+			font-size: 2rem;
+			text-decoration: none;
+			text-transform: capitalize;
+			letter-spacing: 1px;
+			color: col.$globalTextColor;
+		}
+		ol {
+			font-family: $BtnNav;
+			font-weight: 600;
+			transition: background-color 0.3s, scale 0.3s;
+			border-radius: 10px;
+			padding: 5px 15px;
+			cursor: pointer;
+			// transition: transform 1s;
+			//BTN My Passion
+			&:nth-child(1) {
+				transform: scale(0) rotate(-10deg);
+				background-color: col.$mojaPasja;
+				// animation: spring 1s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+				animation: springBtnPasion 1.5s 0.6s
+					cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
+				&:hover {
+					background-color: col.$mojaPasjaHover;
+					scale: 1.05;
+				}
+			}
+			// BTN Offer
+			&:nth-child(2) {
+				transform: rotate(5deg) translate(30px) scale(0);
+				background-color: col.$oferta;
+				animation: springBtnOffer 1.5s 0.9s
+					cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
+				&:hover {
+					background-color: col.$ofertaHover;
+					scale: 1.05;
+				}
+			}
+			// CTA Buy Now
+			&:nth-child(3) {
+				@include btn-buy-now;
+				transform: scale(0);
+				z-index: 0;
+				animation: springBtnBuyNow 1s 0.3s
+					cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
+				a {
+					color: col.$buyNowText;
+				}
+			}
+			// BTN Contact
+			&:nth-child(4) {
+				transform: rotate(15deg) translate(60px);
+				transform-origin: 120px;
+				background-color: col.$kontakt;
+				transform: scale(0);
+				z-index: -1;
+				animation: springBtnContact 1.3s 1.3s
+					cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
+				&:hover {
+					background-color: col.$kontaktHover;
+					scale: 1.05;
+				}
+			}
+			// BTN Blog
+			&:nth-child(5) {
+				background-color: #99abd3;
+				transform: scale(0);
+				z-index: -1;
+				animation: springBtnBlog 1s 1.6s cubic-bezier(0.455, 0.03, 0.515, 0.955)
+					forwards;
+				&:hover {
+					background-color: rgba(153, 171, 211, 0.7);
+					scale: 1.05;
+				}
+			}
+		}
+		.facebook-btn {
+			// align-self: flex-end;
+			position: absolute;
+			// top: 240px;
+			// left: 50px;
+			right: -60px;
+			bottom: -50px;
+			z-index: -1;
+			// transform: translate(-50%);
+			opacity: 0;
+			animation: logoShow 4s 1s forwards;
+			a {
+				font-size: 5rem;
+				color: col.$burgerColor;
+				text-decoration: none;
+				transition: color 0.3s, scale 0.3s;
+				&:hover {
+					color: col.$facebookColor;
+				}
+			}
+			&:hover {
+				scale: 1.1;
+			}
+		}
+	}
+	.btn_buy-now {
+		font-family: 'Bangers', system-ui;
+		font-size: 1.8rem;
+		letter-spacing: 2px;
+		padding: 5px 10px;
+		text-transform: uppercase;
+		color: col.$buyNowText;
+	}
+	// Menu show
+	&_aside.nav-fixed {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 5px;
+		font-size: 2rem;
+		background-color: rgba(77, 73, 82, 0.858);
+		backdrop-filter: blur(3px);
+		transform: translate(0);
+		scale: 1;
+		opacity: 1;
+		transition: transform 1s, opacity 1s;
+	}
+	&_aside.nav-active {
+		transform: translate(-100%);
+		opacity: 0;
+	}
+}
+// HEADER
+.header_offer {
+	position: relative;
+	width: 100%;
+	height: 320px;
+	background-image: url(../img/contact/kontakt.webp);
+	background-position: 0 30%;
+	background-size: cover;
+	z-index: 0;
+	&-hero {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.6);
+		backdrop-filter: blur(2px);
+		z-index: 0;
+	}
+	&-text {
+		height: 100%;
+		// z-index: 2;
+		h1 {
+			position: absolute;
+			bottom: 25px;
+			left: 40px;
+			font-size: 2.4rem;
+			text-shadow: 0px 0px 5px rgb(0, 0, 0);
+			color: col.$burgerColor;
+		}
+	}
+}
+.contact {
+	width: 100%;
+    margin: 30px 0;
+	&_flex {
+	display: flex;
+    justify-content: center;
+    }
+	.contact-form {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 10px;
+		width: 80%;
+		.contact-box {
+			width: 100%;
+			label {
+				font-size: 1.3rem;
+				margin: 5px;
+			}
+			.contact-box--error {
+				visibility: hidden;
+				padding-left: 5px;
+				color: rgb(255, 49, 49);
+				&.error {
+					visibility: visible;
+					background-color: transparent;
+				}
+			}
+		}
+		.contact-box--rodo {
+			display: flex;
+			margin: 10px 0;
+			input {
+				width: 30px;
+				align-self: flex-start;
+				margin: 10px;
+				margin-top: 0;
+				margin-left: 5px;
+			}
+			label.error {
+				background-color: transparent;
+				color: rgb(255, 49, 49);
+			}
+		}
+		input,
+		textarea,
+		button {
+			font-size: 1.1rem;
+			width: 100%;
+			padding: 5px 10px;
+			margin-top: 3px;
+			// margin-bottom: 0;
+			letter-spacing: 0.3px;
+			border: 1px solid rgba(0, 0, 0, 0.508);
+			border-radius: 5px;
+			background-color: #dfdfdfb9;
+			color: black;
+		}
+
+		textarea {
+			resize: vertical;
+			min-height: 100px;
+		}
+		button {
+			font-size: 1.1rem;
+			width: auto;
+			padding: 6px 30px;
+			background-color: #dfdfdfb9;
+
+			cursor: pointer;
+			transition: background-color 0.3s, color 0.3s;
+			&:hover {
+				background-color: #666565;
+				color: white;
+			}
+		}
+		input.error,
+		textarea.error {
+			background-color: rgba(189, 145, 145, 0.874);
+			border: 1px solid rgb(188, 108, 108);
+		}
+	}
+	.msg-status {
+		display: none;
+		font-size: 1.2rem;
+		position: absolute;
+		top: 40px;
+		width: 300px;
+		padding: 20px;
+		border-radius: 10px;
+		text-align: center;
+	}
+	.success {
+		display: block;
+		background-color: green;
+	}
+	.error {
+		display: block;
+		background-color: rgb(195, 12, 12);
+	}
+}
+.footer {
+	position: relative;
+	background-color: rgba(0, 0, 0, 1);
+	z-index: 0;
+	&_box {
+		position: relative;
+		padding: 0 8vw;
+	}
+	&_img {
+		position: absolute;
+		width: 80vw;
+		max-width: 1100px;
+		height: 50vw;
+		max-height: 400px;
+		clip-path: polygon(0 0, 100% 0, 50% 50%, 0% 100%, 0 100%);
+		// clip-path: rect(5px 5px 160px 145px round 20%);
+		overflow: hidden;
+		z-index: -1;
+		&::before {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			// background-color: rgba(0, 0, 0, 0.5);
+			background-image: linear-gradient(
+				90deg,
+				rgba(0, 0, 0, 1) 0%,
+				rgba(0, 0, 0, 0.7) 50%
+			);
+			z-index: 1;
+		}
+		img {
+			width: 100%;
+			height: 100%;
+			object-position: 0px -100px;
+			object-fit: cover;
+			z-index: -1;
+		}
+	}
+	&_info {
+		// position: static;
+		&-logo {
+			position: relative;
+			height: 50vw;
+
+			.nav_logo {
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+				margin: 0;
+			}
+		}
+		&-social {
+			display: flex;
+			justify-content: center;
+			margin-top: -10px;
+			margin-bottom: 20px;
+			a {
+				text-decoration: none;
+				color: col.$facebookColor;
+			}
+			.fa-brands {
+				font-size: 3.5rem;
+			}
+		}
+		&-text {
+			font-size: 1.4rem;
+			padding: 10px;
+			text-align: center;
+			// text-indent: 15px;
+		}
+	}
+	&_menu {
+		ul {
+			font-size: 1.8rem;
+			padding: 20px 0;
+			padding-bottom: 80px;
+			list-style: none;
+			text-align: center;
+			li {
+				position: relative;
+				padding: 10px 0;
+				a {
+					text-decoration: none;
+					color: col.$burgerColor;
+					cursor: pointer;
+					transition: color 0.3s;
+					&:hover {
+						// scale: 1.01;
+						color: col.$ofertaHover;
+					}
+				}
+				&::before {
+					content: '';
+					position: absolute;
+					width: 50%;
+					height: 1px;
+					left: 50%;
+					bottom: -1px;
+					transform: translate(-50%);
+					background-color: col.$burgerColor;
+					opacity: 0.3;
+				}
+				&:last-child {
+					// @include btn-buy-now;
+					transform: scale(0.6);
+					z-index: 0;
+					animation: springBtnBuyNow 1s 0.3s
+						cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
+					transition: scale 0.3s;
+					&:hover {
+						scale: 1.2;
+					}
+					a {
+						color: col.$buyNowBackground;
+					}
+					&::before {
+						content: none;
+					}
+				}
+			}
+		}
+	}
+}
+.return {
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	right: 0;
+	bottom: 0;
+	img {
+		width: 100%;
+		height: 100%;
+	}
+	&_arrows {
+		position: absolute;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 50%;
+		bottom: 20%;
+		right: 0;
+		font-size: 1.8rem;
+		color: black;
+		cursor: pointer;
+		.fa-chevron-up:last-child {
+			margin-top: -25px;
+		}
+	}
+}
+.active {
+	color: rgb(150, 150, 217);
+}
+.active_gray {
+	background-color: rgba(79, 79, 79, 0.6);
+}
+.develop {
+	font-size: 1.6rem;
+	@include developBtn;
+	cursor: pointer;
+	transition: scale 0.3s;
+	&:hover {
+		scale: 1.2;
+	}
+}
+.disable {
+	display: none;
+}
+@import './mini';
+@import './small';
+@import './medium';
+@import './large';

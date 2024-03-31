@@ -13,7 +13,7 @@
         href="https://fonts.googleapis.com/css2?family=Allison&family=Allura&family=Bangers&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mr+De+Haviland&family=Mrs+Saint+Delafield&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Tenor+Sans&family=Vidaloka&display=swap"
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/77a61c1a6e.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./css/offer.css">
+    <link rel="stylesheet" href="./css/contact.css">
 </head>
 
 <body class="body">
@@ -32,7 +32,8 @@
             <ul class="nav_list nav_list-offer">
                 <ol class="btn btn-one"><a href="#">Moja pasja</a></ol>
                 <ol class="btn btn-two"><a href="./offer.html">Oferta</a></ol>
-                <ol class="btn btn-three"><a href="./offer.html" class="btn_buy-now"><i class="fa-solid fa-cart-shopping"></i> Buy
+                <ol class="btn btn-three"><a href="./offer.html" class="btn_buy-now"><i
+                            class="fa-solid fa-cart-shopping"></i> Buy
                         now</a></ol>
                 <ol class="btn btn-four"><a href="./contact.html">Kontakt</a></ol>
                 <ol class="btn btn-five nav_list-btn--blog"><a href="#">Blog</a></ol>
@@ -61,10 +62,39 @@
     <header class="header_offer">
         <div class="header_offer-hero"></div>
         <div class="wrapper header_offer-text">
-            <h1>Co mogę <br>dla Ciebie zrobić:</h1>
+            <h1>Napisz do mnie</h1>
         </div>
     </header>
-    
+    <main>
+        <section class="contact">
+            <div class="wrapper contact_flex">
+                <form id="form" action="./php/mail.php" method="post" class="contact-form">
+                    <div class="contact-box">
+                        <label for="name">Imię:</label>
+                        <input type="text" id="name" name="name">
+                        <p class="contact-box--error">Wpisz imię! Minimum 3 znaki.</p>
+                    </div>
+                    <div class="contact-box">
+                        <label for="email">Mail:</label>
+                        <input type="text" id="email" name="email">
+                        <p class="contact-box--error">E-mail jest nieprawidłowy! Przykład: aa@aa.aa</p>
+                    </div>
+                    <div class="contact-box">
+                        <label for="msg">Wiadomość:</label>
+                        <textarea name="msg" id="msg"></textarea>
+                        <p class="contact-box--error">Wpisz wiadomość!</p>
+                    </div>
+                    <div class="contact-box--rodo">
+                        <input type="checkbox" name="rodo" id="rodo">
+                        <label for="rodo">Zgadzam się na przechowywanie przesłanych przeze mnie informacji w tej
+                            witrynie internetowej do celów udzielenia odpowiedzi na moje zapytanie.</label>
+                    </div>
+                    <button type="submit" class="contact-form--btn">Wyślij</button>
+                </form>
+                <p class="msg-status"></p>
+            </div>
+        </section>
+    </main>
     <footer class="footer">
         <div class="wrapper footer_box">
             <div class="footer_img">
@@ -99,7 +129,8 @@
                     <li><a href="./offer.html">Oferta</a></li>
                     <li><a href="">Blog</a></li>
                     <li><a href="./contact.html">Kontakt</a></li>
-                    <li><a href="./offer.html" class="btn_buy-now "><i class="fa-solid fa-cart-shopping"></i> Buy now</a></li>
+                    <li><a href="./offer.html" class="btn_buy-now "><i class="fa-solid fa-cart-shopping"></i> Buy
+                            now</a></li>
                 </ul>
 
             </div>
@@ -116,7 +147,7 @@
     <script src="./js/mediaquares.js"></script>
     <script src="./js/nav.js"></script>
     <script src="./js/main.js"></script>
-    <script src="./js/offer.js"></script>
+    <script src="./js/contact.js"></script>
 </body>
 
 </html>
